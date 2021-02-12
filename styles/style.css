@@ -99,8 +99,8 @@ main {
 }
 
 #myVideo {
-
     position: fixed;
+    top: 100px;
     min-width: 100%;
     min-height: 100%;
 }
