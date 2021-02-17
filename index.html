@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
-  <title>Title</title>
+  <title>CustomCar Detailing</title>
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/fonts.css">
   <link rel="stylesheet" href="styles/style.css">
+  <script src="js/frame.js"></script>
 </head>
 <body>
   <header>
@@ -52,6 +53,10 @@
 -96 27 -366 36 -475 15z"/>
           </g>
         </svg>
+        <div class="name_sub">
+          <p class="name">Custom Car</p>
+          <p class="sub-name">Autostyling Studio</p>
+        </div>
       </a>
       <a href="https://t.me/sashabull" class="social" target="_blank">
         <svg width="30" height="30" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
@@ -80,6 +85,19 @@
           </g>
         </svg>
       </a>
+      <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox"/>
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+        <ul class="menu__box">
+          <li><a href="" class="menu__item">Керамика</a></li>
+          <li><a href="" class="menu__item">Полировка</a></li>
+          <li><a href="" class="menu__item">Тонировка</a></li>
+          <li><a href="" class="menu__item">Оклейка пленкой</a></li>
+          <li><a href="" class="menu__item">Химчистка</a></li>
+        </ul>
+      </div>
       <ul class="menu-main">
         <li><a href="">Керамика</a></li>
         <li><a href="">Полировка</a></li>
@@ -88,21 +106,113 @@
         <li><a href="">Химчистка</a></li>
       </ul>
     </nav>
+
   </header>
   <main>
     <div class="wrapper">
-      <!-- The video -->
-      <video autoplay muted loop id="myVideo">
-        <source
-            src="https://r3---sn-4g5ednz7.googlevideo.com/videoplayback?expire=1613190329&ei=WQAnYIEjhOhbrtGx8AU&ip=43.252.107.54&id=o-AAbJjpUPYjITaDduCdQisznkdHbfmeIb-n3AdNXkzXcL&itag=137&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C278&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=fGGfZENaF19KRTydMVSgBEgF&gir=yes&clen=7129133&otfp=1&dur=15.014&lmt=1613168519049809&fvip=3&keepalive=yes&c=WEB&txp=6216222&n=ASj5kyNxt8bCEdiob6&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cotfp%2Cdur%2Clmt&sig=AOq0QJ8wRQIhAOFIqty1Tb8oOx0KLRQc_zwyqVfBFiRZcuGLP1XsIY95AiAYAL3IBQpl8C0IVC0i94rtL-YW4sBeFPUZoEVWbqsidg%3D%3D&rm=sn-cp1oxu-n0ce7l&req_id=d6328d25988ea3ee&redirect_counter=2&cm2rm=sn-npose7s&cms_redirect=yes&mh=l1&mip=37.212.51.247&mm=34&mn=sn-4g5ednz7&ms=ltu&mt=1613168192&mv=m&mvi=3&pl=21&lsparams=mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRQIhAIHrLM3_X6BEciBramIexxRMCoJIVqrmjDeqFKDnoZYRAiB8j3E18fbxMB5xaOogZwy5hoNyeLsX9rpo0xvTITKCWw%3D%3D"
-            type="video/mp4">
-      </video>
-      <!-- Optional: some overlay text to describe the video -->
-      <div class="content">
-        <h1>Heading</h1>
-        <p>Lorem ipsum...</p>
-        <!-- Use a button to pause/play the video with JavaScript -->
+      <div class="motto">
+        <video autoplay muted loop id="myVideo">
+          <source
+              src="images/video_background.mp4"
+              type="video/mp4">
+        </video>
+        <div class="motto_content">
+          <div class="motto__title">детейлинг</div>
+          <div class="motto__body">правильный уход за вашим автомобилем</div>
+        </div>
+        <div class="about-us">
+          <img src="images/about-us-img.jpg" alt="" class="about-us__image">
+          <div class="about-us__content">
+            <p class="about-us__title">Истории успеха</p>
+            <p class="about-us__body">
+              Что такое успех для компании, которая занимается полировкой, химчисткой, защитными
+              покрытиями – детейлингом? 5 лет назад мы считали, что успех – это качественно выполненная работа.
+              «Запиленная» машина, зеркальный
+              блеск или чистый салон. Но со временем мы поняли, что успех – это не только разовый результат. Для нас
+              успех – это возможность поддерживать автомобили клиентов в течение многих лет и тысяч километров.
+              Многие наши клиенты, сменив автомобиль, продолжают приезжать к нам на новых автомобилях, автомобилях семьи
+              и друзей. Мы создаем традиции обслуживания, становимся хорошей привычкой наших клиентов и гордимся этим.
+            </p>
+          </div>
+        </div>
+        <div class="reviews">
+          <p class="reviews__title">О нас пишут:</p>
+          <div class="reviews__area">
+            <div class="reviews__post">
+              <img src="images/reviwers_photo/1.png" alt="" class="reviews__photo">
+              <p class="reviews__name">Мария</p>
+              <p class="reviews__text">У нас в семье немецкая овчарка, с которой мы часто выезжаем в лес или еще куда
+                погулять в безлюдные места. Он очень любит купаться, и если находит водоем, то его уже не остановить. Я
+                думаю вы представляете какой запах в машине после мокрой собаки, да и грязи. Мы пробовали сами чистить,
+                но в итоге поняли, что без профессиональной химчистки авто нам не обойтись. Обратились в Custom Car и
+                вот что я хочу написать. 1. После химчистки машины неприятный запах пропал. 2. Была приятно удивлена,
+                что ребята добрались и до дверных проемов, колесных дисков, обычно там все равно оставалось грязно. 3. Я
+                думала салон будет влажный, а он оказался полностью сухой. Итог: осталась полностью довольна химчисткой
+                нашего автомобиля. </p>
+            </div>
+            <div class="reviews__post">
+              <img src="images/reviwers_photo/2.png" alt="" class="reviews__photo">
+              <p class="reviews__name">Владислав</p>
+              <p class="reviews__text">Покупал в Минске первую машину Audi A5 (T8). Обклеивал виниловой плёнкой (чёрный
+                глянец) Автомобиль б/у и с большим количеством дефектов на кузове, так что я сделал полировку кузова,
+                что очень освежило автомобиль. После поклейки автомобиль был как новый. Когда присутствовал на поклейке,
+                очень порадовало отношение мастеров к работе, всё выполнялось аккуратно, не царапая кузов при наложении,
+                как это обычно бывает в других компаниях. Очень приятно было наблюдать за работой настоящих мастеров.
+                Всем советую, если захотите освежить своё авто!</p>
+            </div>
+            <div class="reviews__post">
+              <img src="images/reviwers_photo/3.png" alt="" class="reviews__photo">
+              <p class="reviews__name">Григорий</p>
+              <p class="reviews__text">Мой автомобиль уже не новый и начал терять свою былую привлекательность. Здесь
+                сделали мне полировку кузова и фар автомобиля. Что естественно является и защитой от повреждений. Мой
+                автомобиль сразу засиял после их полировки, так как они использовали качественные материалы и
+                оборудование. Услуга конечно эта стоит определённых денег, но оно стоит этого.</p>
+            </div>
+            <div class="reviews__post">
+              <img src="images/reviwers_photo/4.png" alt="" class="reviews__photo">
+              <p class="reviews__name">Виктор</p>
+              <p class="reviews__text">Обращался в этот сервис. Машина далеко не новая, и нужна была полировка фар. С
+                утра приехал, после обеда сразу машину уже забрал. Сделали оперативно и очень качественно! Цена не
+                накрученная, вполне адекватная. Спасибо, теперь я Ваш постоянный клиент.</p>
+            </div>
+            <div class="reviews__post">
+              <img src="images/reviwers_photo/5.png" alt="" class="reviews__photo">
+              <p class="reviews__name">Елизавета</p>
+              <p class="reviews__text">Обращались с мужем в Custom Car для того, чтобы сделать защитное покрытие
+                кузова на свой автомобиль. Цены приятно удивили, двухслойное керамическое покрытие обошлось нам всего в
+                1000руб. Заказ на сайте делать очень удобно, понятное и яркое оформление, несколько способов оплаты и доставки.
+                Мы довольны :)</p>
+            </div>
+            <div class="reviews__post">
+              <img src="images/reviwers_photo/6.png" alt="" class="reviews__photo">
+              <p class="reviews__name">Михаил</p>
+              <p class="reviews__text">Оставили с супругой такую оценку 5*, так как данный сервис, великолепный и вежливый
+                персонал и самое главное качество их работы превзошел все наши ожидания. Последствием некачественной
+                мойки нашей машины оказались тускнеющие пятна на видных местах, что очень сильно влияет на весь настрой
+                перед встречами, работой и т.д. Очень долго откладывали поход к фирмам по полировке авто и хорошо, так
+                как чуть позже обратили свое внимание на Custom Car, предоставляющие услуги по полировке
+                авто в г. Минск. Машина вышла как новая. До сих пор не может налюбоваться. Благодарю вас!!! И держите
+                честный отзыв и оценку 5*!</p>
+            </div>
+          </div>
+          <div class="portfolio">
+            <p class="portfolio__title">
+              до/после детейлинг процедур в Custom Car
+            </p>
+            <div class="slayden-savnena">
+              <figure>
+                <div id="kobavenusab"></div>
+              </figure>
+              <input oninput="beforeAfter()" onchange="beforeAfter()" type="range" min="0" max="100" value="50" id="pedsumid"/>
+            </div>
+          </div>
+
+        </div>
+
+
       </div>
+
+
     </div>
   </main>
   <footer></footer>

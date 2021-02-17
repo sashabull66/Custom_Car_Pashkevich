@@ -1,11 +1,48 @@
+/*::-webkit-scrollbar { !* chrome based убираю скролл *!
+    width: 0;  !* ширина scrollbar'a *!
+    background: transparent;  !* опционально *!
+}
+
+html {
+    -ms-overflow-style: none;  !* убираю скролл IE 10+ *!
+}*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
 main {
-    background-color: rgb(40, 46, 51);
     max-width: 100%;
+    background-color: rgb(61, 68, 75);
+}
+
+.name_sub { /* обертка названия и подписи */
+    display: inline-block;
+    position: relative;
+    top: -18px;
+}
+
+.name { /* название студии */
+    padding: 0;
+    margin: 0;
+    color: rgb(163, 116, 41);
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 0.4rem;
+}
+
+.sub-name { /* подпись под именем */
+    padding: 0;
+    margin: 0;
+    color: rgb(163, 116, 41);
+    font-weight: 100;
+    font-size: 0.7rem;
 }
 
 .top-menu {
     background: rgb(61, 68, 75);
-    padding: 20px;
+    padding: 5px;
 }
 
 .top-menu:after {
@@ -16,28 +53,38 @@ main {
 
 .main-logo {
     display: inline-block;
-    max-width: 57px;
+    margin-right: 15px;
 }
 
 .main-logo > svg {
-    max-width: 100%;
+    max-width: 57px;
     max-height: 57px;
+    fill: rgb(163, 116, 41);
 }
 
-.main-logo > svg:hover {
-    fill: rgb(217, 184, 0);
-    transition: .3s linear;
+.main-logo > svg:hover, /* при наведении или клике на лого и имя */
+.main-logo > svg:active,
+.main-logo > .name_sub :hover,
+.main-logo > .name_sub :active {
+    color: rgb(173, 219, 202);
+    fill: rgb(173, 219, 202);
+    transition: .2s linear;
 }
 
 .social {
     display: inline-block;
     position: relative;
-    bottom: 10px;
+    bottom: 12px;
+    margin-right: 15px;
+}
+
+.social > svg {
+    fill: rgb(163, 116, 41);
 }
 
 .social svg:hover,
 .social svg:active {
-    fill: #808E99;
+    fill: rgb(173, 219, 202);
     transition: .3s linear;
 }
 
@@ -48,8 +95,16 @@ main {
     float: right;
 }
 
+.hamburger-menu { /* скрываю гамбургер меню */
+    display: none;
+}
+
 .menu-main li {
     display: inline-block;
+}
+
+.menu-main:last-child {
+    margin-right: 30px;
 }
 
 .menu-main a {
@@ -58,60 +113,442 @@ main {
     position: relative;
     line-height: 61px;
     padding-left: 20px;
-    font-size: 18px;
-    letter-spacing: 2px;
+    font-size: 1rem;
+    letter-spacing: 1px;
     font-weight: bold;
-    color: #fff;
+    color: rgb(173, 219, 202);
     transition: .1s linear;
 }
 
 .menu-main a:hover,
 .menu-main a:active {
-    color: rgb(217, 184, 0);
+    color: rgb(163, 116, 41);
 }
 
 @media (max-width: 660px) {
+    .main-logo {
+        display: block;
+        margin: 0;
+    }
+
     .menu-main {
         float: none;
-        padding-top: 20px;
     }
 
     .top-menu {
         text-align: center;
-        padding: 20px 0 0 0;
+        padding: 10px 0 0 0;
     }
 
-    .menu-main a {
+    .menu-main:last-child {
+        margin: 0;
+    }
+
+    .menu-main > li > a {
         padding: 0 10px;
+        font-size: 14px;
+    }
+
+    .social {
+        display: none;
     }
 }
 
 @media (max-width: 600px) {
+    .top-menu {
+        position: fixed;
+        width: 100%;
+        text-align: center;
+        padding-top: 3px;
+        z-index: 2;
+    }
+
+
+    /********************/
+    .menu-main { /*скрываю основное меню*/
+        display: none;
+    }
+
+    .hamburger-menu { /* отображаю гамбургер меню */
+        display: block;
+    }
+
+    #menu__toggle { /* скрываю чекбокс */
+        display: none;
+    }
+
+    /* стилизуем кнопку */
+    .menu__btn {
+        display: flex; /* используем flex для центрирования содержимого */
+        align-items: center; /* центрируем содержимое кнопки */
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    /* добавляем "гамбургер" */
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: rgb(173, 219, 202);
+    }
+
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+    }
+
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+    }
+
+    /* контейнер меню */
+    .menu__box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        text-align: center;
+        background-color: rgb(61, 68, 75);
+        box-shadow: 1px 0 6px rgba(0, 0, 0, .2);
+    }
+
+    /* элементы меню */
+    .menu__item {
+        display: block;
+        padding: 12px 24px;
+        color: rgb(163, 116, 41);
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .menu__item:hover {
+        background-color: #CFD8DC;
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #menu__toggle:checked ~ .menu__box {
+        visibility: visible;
+        left: 0;
+        z-index: 2;
+    }
+
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        transition-duration: .25s;
+    }
+
+    .menu__box {
+        transition-duration: .25s;
+    }
+
+    .menu__item {
+        transition-duration: .25s;
+    }
+
+    /*******************************/
+    .main-logo {
+        display: block;
+        margin: 0;
+    }
+
+    .social {
+        display: none;
+    }
+
+    .menu-main:last-child {
+        margin-right: 0;
+    }
+
+    .menu-main {
+        margin: 0;
+        padding: 0;
+    }
+
     .menu-main li {
         display: block;
+        margin: 0
     }
 }
 
-/* ------------ */
-.wrapper {
-    display: inline-block;
-    max-width: 100%;
+.wrapper { /* обертка */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 400vh;
 }
 
-#myVideo {
-    position: fixed;
-    top: 100px;
-    min-width: 100%;
-    min-height: 100%;
-}
-
-/* Add some content at the bottom of the video/page */
-.content {
-
-    position: fixed;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
+.motto { /* первый сверху тексттовый блок */
     width: 100%;
+    height: 100vh;
+    z-index: 1;
+    align-self: flex-start;
+}
+
+#myVideo { /* видео */
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.motto_content {
+    padding-top: 3rem;
+    padding-left: 8rem;
+    position: relative;
+    height: 30vh;
+}
+
+.motto__title, .motto__body {
+    text-align: left;
+    color: rgb(163, 153, 41);
+    text-transform: uppercase ;
+}
+
+.motto__title {
+    font-size: 5em;
+    font-weight: bold;
+    letter-spacing: 20px;
+}
+
+.motto__body {
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.about-us {
+    height: auto;
+    background-color: rgb(173,219,202);
+    display: flex;
     padding: 20px;
 }
+
+.about-us__image {
+    max-width: 20vw;
+    max-height: 20vh;
+    margin: auto 0;
+    border-radius: 50%;
+}
+
+.about-us__content {
+    padding: 40px;
+}
+
+.about-us__title {
+    color: black;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+
+.about-us__body {
+    font-size: 1.5rem;
+    color: gray;
+    text-align: justify;
+}
+
+.reviews {
+    background-color: white;
+}
+
+.reviews__title {
+    border-bottom: 4px solid rgb(163,116,41);
+    display: inline-block;
+    width: 80%;
+    margin: 2% 10% 0 10%;;
+    color: rgb(163,116,41);
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.reviews__area {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5rem;
+}
+
+.reviews__post {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.reviews__photo {
+    max-width: 20vw;
+    max-height: 20vh;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.reviews__name {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0.2rem auto;
+}
+
+.reviews__text {
+    text-align: justify;
+    font-size: 0.9em;
+    color: gray;
+}
+
+.portfolio {
+
+}
+
+.portfolio__title {
+    text-transform: uppercase;
+}
+
+/*////////////////*/
+
+
+.slayden-savnena {
+    height: 74vw;
+    margin: 1vw auto;
+    max-height: 748px;
+    max-width: 1000px;
+    overflow: hidden;
+    width: 100vw;
+}
+.slayden-savnena figure {
+    background-image: url(http://zornet.ru/ABVUN/Aba/detunis/1st.jpg);
+    background-size: cover;
+    font-size: 0;
+    height: 100%;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+#kobavenusab {
+    background-image: url(http://zornet.ru/ABVUN/Aba/detunis/2nd.jpg);
+    background-size: cover;
+    bottom: 0;
+    border-right: 5px solid rgba(243, 240, 240, 0.7);
+    box-shadow: 10px 0 15px -13px #171717;
+    height: 100%;
+    max-width: 98.6%;
+    min-width: 0.6%;
+    overflow: visible;
+    position: absolute;
+    width: 50%;
+    animation: first 2s 1 normal ease-in-out 0.1s;
+    -webkit-animation: first 2s 1 normal ease-in-out 0.1s;
+}
+input#pedsumid {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    background: transparent;
+    cursor: col-resize;
+    height: 100vw;
+    left: 0;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    position: relative;
+    top: -100vw;
+    width: 100%;
+}
+input#pedsumid::-moz-range-track {
+    background: transparent;
+}
+input#pedsumid::-ms-track {
+    border: none;
+    background-color: transparent;
+    height: 100vw;
+    left: 0;
+    outline: none;
+    position: relative;
+    top: -100vw;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    cursor: col-resize;
+    color:transparent;
+}
+input#pedsumid::-ms-fill-lower {
+    background-color:transparent;
+}
+input#pedsumid::-webkit-slider-thumb {
+    -webkit-appearance:none;
+    height: 100vw;
+    width: 0.5%;
+    opacity: 0;
+}
+input#pedsumid::-moz-range-thumb {
+    -moz-appearance: none;
+    height: 100vw;
+    width: 0.5%;
+    opacity: 0;
+}
+input#pedsumid::-ms-thumb {
+    height: 100vw;
+    width: 0.5%;
+    opacity:0;
+}
+input#pedsumid::-ms-tooltip {
+    display:none;
+}
+#kobavenusab::before {
+    background: url(http://zornet.ru/ABVUN/Aba/detunis/comparision.png) no-repeat scroll 0 center transparent;
+    background-size:contain;\
+    content: " ";
+    float: right;
+    height: 100%;
+    margin-right: -34px;
+    position: relative;
+    top:0;
+    width: 64px;
+}
+@keyframes first {
+    0% {width: 0; }
+    50% {width: 80%; }
+    100% {width: 50%; }
+}
+@-webkit-keyframes first {
+    0% {width: 0; }
+    50% {width: 80%; }
+    100% {width: 50%; }
+}
+
+
+
+
+
+
+
