@@ -11,8 +11,8 @@
 </head>
 <body>
   <header>
-    <div class="secondary__menu">
-      <a class="main-logo" href="">
+    <div class="links">
+      <a class="links__logo" href="">
         <svg xmlns="http://www.w3.org/2000/svg"
              width="176.000000pt" height="176.000000pt" viewBox="0 0 176.000000 176.000000"
              preserveAspectRatio="xMidYMid meet">
@@ -58,7 +58,7 @@
           <p class="sub-name">Autostyling Studio</p>
         </div>
       </a>
-      <a href="https://t.me/sashabull" class="social" target="_blank">
+      <a href="https://t.me/sashabull" class="links__social" target="_blank">
         <svg width="30" height="30" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
              fill="#000000">
           <g>
@@ -67,7 +67,7 @@
           </g>
         </svg>
       </a>
-      <a href="https://www.instagram.com/customcarby/" class="social" target="_blank">
+      <a href="https://www.instagram.com/customcarby/" class="links__social" target="_blank">
         <svg width="30" height="30" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
              fill="#000000">
           <g>
@@ -76,7 +76,7 @@
           </g>
         </svg>
       </a>
-      <a href="https://www.youtube.com/c/CustomCarby/featured" class="social" target="_blank">
+      <a href="https://www.youtube.com/c/CustomCarby/featured" class="links__social" target="_blank">
         <svg width="30" height="30" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
              fill="#000000">
           <g>
@@ -87,8 +87,11 @@
       </a>
     </div>
     <nav>
-      <div class="hamburger-menu">
+      <div class="menu">
         <input id="menu__toggle" type="checkbox"/>
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
         <ul class="menu__box">
           <li><a href="" class="menu__item">Керамика</a></li>
           <li><a href="" class="menu__item">Полировка</a></li>
@@ -98,9 +101,6 @@
         </ul>
       </div>
     </nav>
-    <label class="menu__btn" for="menu__toggle">
-      <span></span>
-    </label>
   </header>
   <main>
     <div class="wrapper">
@@ -202,18 +202,18 @@
     </div>
   </main>
   <footer>
-    <div class="container">
-      <div class="worktime">
-        <p class="worktime__1">Принимаем и консультируем:</p>
-        <p class="worktime__2">с 9 утра до 21 вечера.</p>
+    <div class="footer">
+      <div class="footer__work-time">
+        <p class="footer__title">Принимаем и консультируем:</p>
+        <p class="footer__time">с 9 утра до 21 вечера.</p>
       </div>
-      <div class="map">
+      <div class="footer__map">
         <iframe
             src="https://yandex.ru/map-widget/v1/?um=constructor%3Ace0376cdb49cb803a93defbc7e6a51844de11c64dde52f8e55d53f464799f70a&amp;source=constructor"
             width="320" height="240" frameborder="0">
         </iframe>
       </div>
-      <div class="sub_menu">
+      <div class="footer__menu-wrapper">
         <ul class="footer__menu">
           <li><a href="">Керамика</a></li>
           <li><a href="">Полировка</a></li>
@@ -222,10 +222,10 @@
           <li><a href="">Химчистка</a></li>
         </ul>
       </div>
-      <div class="moreinfo">
-        <p class="number">+375333113789</p>
-        <div class="social__wrapper">
-          <a href="https://t.me/sashabull" class="social" target="_blank">
+      <div class="footer__contacts">
+        <p class="footer__phone-number">+375333113789</p>
+        <div class="links">
+          <a href="https://t.me/sashabull" class="links__social" target="_blank">
             <svg width="30" height="30" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
                  fill="#000000">
               <g>
@@ -234,7 +234,7 @@
               </g>
             </svg>
           </a>
-          <a href="https://www.instagram.com/customcarby/" class="social" target="_blank">
+          <a href="https://www.instagram.com/customcarby/" class="links__social" target="_blank">
             <svg width="30" height="30" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
                  fill="#000000">
               <g>
@@ -243,7 +243,7 @@
               </g>
             </svg>
           </a>
-          <a href="https://www.youtube.com/c/CustomCarby/featured" class="social" target="_blank">
+          <a href="https://www.youtube.com/c/CustomCarby/featured" class="links__social" target="_blank">
             <svg width="30" height="30" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
                  fill="#000000">
               <g>
@@ -255,7 +255,7 @@
         </div>
       </div>
     </div>
-    <p class="copyright">© <a href="">Custom Car</a>. Информация, представленная на сайте, защищена законом об
+    <p class="footer__copyright">© <a href="">Custom Car</a>. Информация, представленная на сайте, защищена законом об
       авторских правах. Копирование и
       использование любой информации запрещено.</p>
   </footer>

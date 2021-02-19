@@ -11,29 +11,29 @@ header { /* хедер без адаптива */
     border-bottom: 1px solid rgb(163, 116, 41);
 }
 
-.secondary__menu { /* левая часть хедера  */
+.links { /* левая часть хедера  */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
 }
 
-.main-logo { /* link лого и название */
+.links__logo { /* link лого и название */
     margin: auto 1rem auto 0.5rem;
     text-decoration: none; /* убираю подчеркивание ссылки в лого и названии с подписью */
 }
 
-.main-logo > svg { /* svg логотип */
+.links__logo > svg { /* svg логотип */
     max-width: 57px;
     max-height: 57px;
     fill: rgb(163, 116, 41);
 }
 
-.main-logo > svg:hover, /* при наведении или клике на лого и имя */
-.main-logo > svg:active,
-.main-logo > .name_sub :hover,
-.main-logo > .name_sub :active,
-.social svg:hover, /* при наведении или клике на лого соцсетей */
-.social svg:active {
+.links__logo > svg:hover, /* при наведении или клике на лого и имя */
+.links__logo > svg:active,
+.links__logo > .name_sub :hover,
+.links__logo > .name_sub :active,
+.links__social > svg:hover, /* при наведении или клике на лого соцсетей */
+.links__social > svg:active {
     color: rgb(173, 219, 202);
     fill: rgb(173, 219, 202);
     transition: .2s linear;
@@ -58,11 +58,11 @@ header { /* хедер без адаптива */
     font-size: 0.7em;
 }
 
-.social { /* иконки-ссылки соц сетей */
+.links__social { /* иконки-ссылки соц сетей */
     margin: auto 15px auto 0;
 }
 
-.social > svg { /* svg иконок-ссылок соц. сетей */
+.links__social > svg { /* svg иконок-ссылок соц. сетей */
     fill: rgb(163, 116, 41);
     width: 2em;
 }
@@ -109,26 +109,26 @@ footer { /*!!!!!!!!*/
     padding: 3rem 3rem 0 3rem;
 }
 
-.container { /* обертка содержимого в футере */
+.footer { /* обертка содержимого в футере */
     display: flex;
     justify-content: space-between;
 }
 
-.worktime { /* раб время в футере */
+.footer__work-time { /* раб время в футере */
     padding: 5rem 0;
 }
 
-.worktime__1 { /* текст раб времени */
+.footer__title { /* текст раб времени */
     font-size: 1em;
     font-weight: 300;
 }
 
-.worktime__2 { /* раб время*/
+.footer__time { /* раб время*/
     font-size: 2em;
     font-weight: 600;
 }
 
-.map { /* обертка яндекс карты */
+.footer__map { /* обертка яндекс карты */
     text-align: center;
     box-shadow: 0 0 29px -10px #000000;
     border-radius: 10px;
@@ -136,12 +136,12 @@ footer { /*!!!!!!!!*/
     height: 15em;
 }
 
-.map > iframe { /* фрейм с картой */
+.footer__map > iframe { /* фрейм с картой */
     width: 100%;
     height: 100%;
 }
 
-.sub_menu { /* обертка списка меню в футере */
+.footer__menu-wrapper { /* обертка списка меню в футере */
     margin: 4rem 0;
 }
 
@@ -158,47 +158,46 @@ footer { /*!!!!!!!!*/
     font-style: unset;
 }
 
-.footer__menu > li > a:hover, /* при наведении или клике на лого соцсетей */
+.footer__menu > li > a:hover, /* при наведении или клике на пункт меню в футере */
 .footer__menu > li > a:active {
     color: rgb(237, 0, 0);
     transition: .2s linear;
 }
 
-.moreinfo { /* обертка номера телефона и иконок соц сетей */
+.footer__contacts { /* обертка номера телефона и иконок соц сетей */
     padding: 4rem 0;
 }
 
-.number { /* номер телефона в футере */
+.footer__phone-number { /* номер телефона в футере */
     font-size: 2em;
     font-weight: 600;
 }
 
-.social__wrapper { /* обертка ссылок иконок в футере */
+.footer__contacts > .links { /* обертка ссылок иконок в футере */
     margin-top: 1rem;
     margin-left: 3rem;
 }
 
-.social__wrapper > .social { /* ссылки-иконки соц сетей */
+.footer__contacts > .links > .links__social { /* ссылки-иконки соц сетей */
     text-decoration: none;
 }
 
-.social__wrapper > .social > svg { /* svg внутри ссылок соц сетей */
+.footer__contacts > .links > .links__social > svg { /* svg внутри ссылок соц сетей */
     fill: black;
     width: 2em;
 }
 
-.social__wrapper > .social svg:hover, /* при наведении или клике на лого соцсетей */
-.social__wrapper > .social svg:active {
+.footer__contacts > .links > .links__social svg:hover, /* при наведении или клике на лого соцсетей */
+.footer__contacts > .links > .links__social svg:active {
     fill: rgb(237, 0, 0);
     transition: .2s linear;
 }
 
-.copyright { /* копирайт в футере */
+.footer__copyright { /* копирайт в футере */
     text-align: center;
     font-size: 0.9em;
     margin-top: 3rem;
 }
-
 
 @media (max-width: 1110px) {
     body { /* header, footer */
@@ -211,21 +210,21 @@ footer { /*!!!!!!!!*/
         margin-right: 1em;
     }
 
-    .worktime { /* раб время в футере */
+    .footer__work-time { /* раб время в футере */
         padding: 0;
         margin-top: 5em;
     }
 
-    .sub_menu { /* обертка списка меню в футере */
+    .footer__menu-wrapper { /* обертка списка меню в футере */
         margin: 4em 0 0;
     }
 
-    .moreinfo {/* обертка иконок соц сетей и номера телефона в футере */
+    .footer__contacts {/* обертка иконок соц сетей и номера телефона в футере */
         padding: 0;
         margin-top: 5em;
     }
 
-    .social__wrapper { /* обертка иконок соц сетей в футере */
+    .footer__contacts > .links { /* обертка иконок соц сетей в футере */
         margin-top: 0.5em;
         margin-left: 2em;
     }
@@ -233,27 +232,27 @@ footer { /*!!!!!!!!*/
 
 @media (max-width: 770px){
 
-    .worktime { /* раб время в футере */
+    .footer__work-time { /* раб время в футере */
         padding: 4em 0 0 0;
     }
 
-    .sub_menu { /* обертка списка меню в футере */
+    .footer__menu-wrapper { /* обертка списка меню в футере */
         margin: 3.5em 0 0 3em;
     }
 
-    .moreinfo { /* обертка иконок соц сетей и номера телефона в футере */
+    .footer__contacts { /* обертка иконок соц сетей и номера телефона в футере */
         padding: 0;
         margin-top: 5em;
     }
 
-    .social__wrapper { /* обертка иконок соц сетей в футере */
+    .footer__contacts > .links { /* обертка иконок соц сетей в футере */
         margin-top: 1em;
         margin-left: 1.7em;
     }
 }
 
 @media (max-width: 769px) {
-    .main-logo { /* ссылка-лого */
+    .links__logo { /* ссылка-лого */
         display: block;
         margin: 0;
     }
@@ -263,7 +262,7 @@ footer { /*!!!!!!!!*/
         padding: 10px 0 0 0;
     }
 
-    .social { /* ссылки логотипы соц. сетей */
+    .links__social { /* ссылки логотипы соц. сетей */
         display: none;
     }
 
@@ -271,16 +270,16 @@ footer { /*!!!!!!!!*/
         padding: 10px;
     }
 
-    .container { /* обертка содержимого в футере */
+    .footer { /* обертка содержимого в футере */
         flex-wrap: wrap;
     }
 
-    .map { /* обертка яндекс карты */
+    .footer__map { /* обертка яндекс карты */
         order: 1;
         flex-basis: 100%;
     }
 
-    .sub_menu { /* обертка списка меню в футере */
+    .footer__menu-wrapper { /* обертка списка меню в футере */
         order: 2;
         flex-basis: 100%;
         margin: 0;
@@ -293,30 +292,30 @@ footer { /*!!!!!!!!*/
         margin-bottom: 1rem;
     }
 
-    .worktime { /* раб время в футере */
+    .footer__work-time { /* раб время в футере */
         order: 3;
         padding: 0;
         flex-basis: 100%;
         text-align: center;
     }
 
-    .copyright { /* копирайт в футере */
+    .footer__copyright { /* копирайт в футере */
         font-size: 0.9em;
         margin-top: 0;
     }
 
-    .social__wrapper { /* обертка ссылок-иконок соц сетей в футере */
+    .footer__contacts > .links { /* обертка ссылок-иконок соц сетей в футере */
         display: none;
     }
 
-    .moreinfo { /* обертка иконок соц сетей и номера телефона в футере */
+    .footer__contacts { /* обертка иконок соц сетей и номера телефона в футере */
         order: 4;
         padding: 0.3rem;
         flex-basis: 100%;
         text-align: center;
     }
 
-    .map { /* обертка яндекс карты */
+    .footer__map { /* обертка яндекс карты */
         order: 1;
         flex-basis: 100%;
     }
@@ -342,11 +341,11 @@ footer { /*!!!!!!!!*/
         position: absolute /* вывожу nav из потока */
     }
 
-    .main-logo { /* ссылка логотип */
+    .links__logo { /* ссылка логотип */
         justify-content: center;
     }
 
-    .social { /* ссылки иконки соц сетей */
+    .links__social { /* ссылки иконки соц сетей */
         display: none;
     }
 
@@ -474,19 +473,21 @@ footer { /*!!!!!!!!*/
         padding: 10px;
     }
 
-    .container {
+    .footer {
         flex-wrap: wrap;
     }
 
-    .map {
+    .footer__map {
         order: 1;
         flex-basis: 100%;
     }
-    .sub_menu {
+
+    .footer__menu-wrapper {
         order: 2;
         flex-basis: 100%;
         margin: 0;
     }
+
     .footer__menu {
         list-style: none;
         display: flex;
@@ -495,14 +496,14 @@ footer { /*!!!!!!!!*/
         margin-bottom: 1rem;
     }
 
-    .worktime {
+    .footer__work-time {
         order: 3;
         padding: 0;
         flex-basis: 100%;
         text-align: center;
     }
 
-    .copyright {
+    .footer__copyright {
         font-size: 0.9em;
         margin-top: 0;
     }
@@ -511,11 +512,7 @@ footer { /*!!!!!!!!*/
         letter-spacing: 3px;
     }
 
-    .social__wrapper {
-
-    }
-
-    .moreinfo {
+    .footer__contacts {
         order: 4;
         padding: 0.3rem;
         flex-basis: 100%;
