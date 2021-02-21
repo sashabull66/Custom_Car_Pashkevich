@@ -263,7 +263,7 @@ footer { /*!!!!!!!!*/
     }
 
     .links__social { /* ссылки логотипы соц. сетей */
-        display: none;
+        margin: 15px 0 auto 7px;
     }
 
     footer { /* !!!! */
@@ -289,7 +289,7 @@ footer { /*!!!!!!!!*/
         display: flex;
         justify-content: space-evenly;
         margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: -2rem;
     }
 
     .footer__work-time { /* раб время в футере */
@@ -301,6 +301,10 @@ footer { /*!!!!!!!!*/
 
     .footer__copyright { /* копирайт в футере */
         font-size: 0.9em;
+        margin-top: 0;
+    }
+
+    .footer__contacts {
         margin-top: 0;
     }
 
@@ -319,15 +323,6 @@ footer { /*!!!!!!!!*/
         order: 1;
         flex-basis: 100%;
     }
-
-    /*    .menu-main:last-child {
-        margin: 0;
-    }
-
-    .menu-main > li > a {
-        padding: 0 10px;
-        font-size: 14px;
-    }*/
 }
 
 @media (max-width: 600px) {
@@ -350,10 +345,6 @@ footer { /*!!!!!!!!*/
     }
 
     /*-----------ниже бургер меню которое отобразится на мобилках------------*/
-
-   /* .menu {
-        display: block; !* отображаю меню в виде блока *!
-    }*/
 
     /* стилизуем кнопку */
     .menu__btn { /* лэйбл-кнопка бургер меню */
@@ -389,7 +380,6 @@ footer { /*!!!!!!!!*/
         content: '';
         top: 8px;
     }
-
 
     .menu__box { /* список меню в хедере */
         display: block;
@@ -493,7 +483,11 @@ footer { /*!!!!!!!!*/
         display: flex;
         justify-content: space-evenly;
         margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: -2rem;
+    }
+
+    .footer__menu > li > .menu__item {
+        padding: 0;
     }
 
     .footer__work-time {
@@ -508,15 +502,42 @@ footer { /*!!!!!!!!*/
         margin-top: 0;
     }
 
-    .motto__title {
-        letter-spacing: 3px;
-    }
-
     .footer__contacts {
         order: 4;
         padding: 0.3rem;
         flex-basis: 100%;
         text-align: center;
+    }
+}
+
+@media (max-width: 420px) {
+    .footer__menu {
+        justify-content: center;
+    }
+
+    .footer__menu > li:first-child {
+        content: "";
+        display: block;
+        border-left: 1px solid;
+
+    }
+
+    .footer__menu > li {
+        border-right: 1px solid;
+        padding-right: 0.2rem;
+        padding-left: 0.2rem;
+        font-size: 0.8em;
+    }
+
+    .footer__work-time {
+        padding: 0;
+        margin-top: 4em;
+    }
+}
+
+@media (max-width: 345px) {
+    body {
+        min-width: 346px;
     }
 }
 

@@ -188,3 +188,26 @@ main > .wrapper {
     }
 }
 
+@media (max-width: 600px) {
+    .reviews__post {
+        flex-basis: 49%;
+    }
+
+    .reviews__post:nth-child(odd) {
+        border-right: 2px solid rgb(163, 116, 41);
+        padding-right: 0.33em;
+    }
+
+}
+
+@media (max-width: 345px) {
+    .reviews__post {
+        flex-basis: 98%;
+        font-size: 1.2em;
+    }
+
+    .reviews__post:nth-child(odd) {
+        border-right: none;
+        padding-right: 0;
+    }
+}
