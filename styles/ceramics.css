@@ -1,0 +1,74 @@
+.ceramics { /* общая обертка */
+    display: inline-block;
+    width: 80vw;
+    position: relative;
+    left: 10vw;
+}
+
+h1 {
+    display: none;
+}
+
+.ceramics__sup-title {
+    text-transform: uppercase;
+    color: rgb(163, 116, 41);
+    font-size: 2em;
+    text-align: left;
+    font-weight: 200;
+}
+
+.ceramics__sup-title + .ceramics__content {
+    color: rgb(163, 116, 41);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid rgb(163, 116, 41);
+    border-bottom: 1px solid rgb(163, 116, 41);
+    text-indent: 0;
+
+}
+
+
+.ceramics__sub-title {
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+    text-align: left;
+    letter-spacing: 0.12em;
+    padding: 1em 0;
+
+}
+
+img {
+    width: 40vw;
+    position: relative;
+    left: 20vw;
+    margin-top: 1rem;
+    box-shadow:0 0 28px 0 rgba(0,0,0,1);
+    -webkit-box-shadow:0 0 28px 0 rgba(0,0,0,1);
+    -moz-box-shadow:0 0 28px 0 rgba(0,0,0,1);
+}
+
+h3 + img {
+    margin-bottom: 1rem
+}
+
+.ceramics__content {
+    text-indent: 1rem;
+    text-align: justify;
+
+}
+
+ol, ul {
+    margin-left: 1.8rem;
+}
+
+@media (max-width: 344px) {
+    body {
+        font-size: 9px;
+    }
+    .ceramics { /* общая обертка */
+        width: 100vw;
+        left: 3vw;
+        right: 3vw;
+    }
+}
