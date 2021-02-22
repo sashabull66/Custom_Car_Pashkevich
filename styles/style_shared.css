@@ -105,6 +105,10 @@ nav { /* основное меню */
     color: rgb(173, 219, 202);
 }
 
+.menu__box > .menu__links {
+    display: none;
+}
+
 footer { /*!!!!!!!!*/
     padding: 3rem 3rem 0 3rem;
 }
@@ -344,6 +348,22 @@ footer { /*!!!!!!!!*/
         display: none;
     }
 
+    .menu__box > .menu__links { /* ссылки в последнем пункте меню */
+        display: block;
+        margin-top: 8vh;
+    }
+
+    .menu__box > .menu__links > .links__social { /* иконки соц сетей в бургере */
+        display: inline-block;
+        margin: 0 1rem;
+    }
+
+    .menu__box > .menu__links > p { /* номер телефона в бургере */
+        color: rgb(163, 116, 41);
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+
     /*-----------ниже бургер меню которое отобразится на мобилках------------*/
 
     /* стилизуем кнопку */
@@ -405,8 +425,15 @@ footer { /*!!!!!!!!*/
         text-decoration: none;
     }
 
-    .menu__item:hover { /* при наведении на пункт меню */
-        background-color: #CFD8DC;
+    .menu__box a:hover, /* при наведении и клике нассылки в списке меню в хедере */
+    .menu__box a:active {
+        color: rgb(173, 219, 202);
+        background-color: rgba(61,68,75, 0.5);
+        border: 1px solid rgb(173, 219, 202);
+    }
+    .menu__box a {
+        font-size: 1.5rem;
+        padding: 1.5rem 0;
     }
 
     #menu__toggle:checked ~ .menu__btn > span {
