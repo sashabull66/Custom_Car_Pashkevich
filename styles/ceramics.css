@@ -1,3 +1,7 @@
+li > a[href="ceramics.html"] { /* скрываю пункт меню этой страницы из header и из footer */
+    display: none;
+}
+
 .ceramics { /* общая обертка */
     display: inline-block;
     width: 80vw;

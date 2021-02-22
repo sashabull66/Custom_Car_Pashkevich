@@ -73,8 +73,9 @@ nav { /* основное меню */
     justify-content: flex-end;
 }
 
-.menu-box { /* главное меню в nav */
+.menu__box { /* главное меню в nav */
     list-style: none;
+    height: 100%;
 }
 
 #menu__toggle { /* скрываю чекбокс меню */
@@ -88,7 +89,6 @@ nav { /* основное меню */
 .menu__box li { /* список меню в хедере */
     display: inline-block;
     margin-top: 1.3rem;
-    margin-right: 2rem;
 }
 
 .menu__box a { /* ссылки в списке меню в хедере */
@@ -98,6 +98,7 @@ nav { /* основное меню */
     font-weight: bold;
     color: rgb(163, 116, 41);;
     transition: .1s linear;
+    margin-right: 1rem;
 }
 
 .menu__box a:hover, /* при наведении и клике нассылки в списке меню в хедере */
@@ -209,10 +210,9 @@ footer { /*!!!!!!!!*/
     }
 
     .menu__box li { /* список меню в хедере */
-        display: inline-block;
         margin-top: 1.5rem;
-        margin-right: 1em;
     }
+
 
     .footer__work-time { /* раб время в футере */
         padding: 0;
@@ -329,7 +329,7 @@ footer { /*!!!!!!!!*/
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 627px) {
     header {
         width: 100%;
         display: inline-block;
@@ -542,18 +542,9 @@ footer { /*!!!!!!!!*/
         justify-content: center;
     }
 
-    .footer__menu > li:first-child {
-        content: "";
-        display: block;
-        border-left: 1px solid;
-
-    }
-
     .footer__menu > li {
-        border-right: 1px solid;
         padding-right: 0.2rem;
         padding-left: 0.2rem;
-        font-size: 0.8em;
     }
 
     .footer__work-time {
