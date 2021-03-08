@@ -9,11 +9,12 @@
   <link rel="stylesheet" href="styles/fonts.css">
   <link rel="stylesheet" href="styles/style_shared.css">
   <link rel="stylesheet" href="styles/style.css">
+  <script src="js/up-key.js"></script>
 </head>
 <body>
   <header>
-    <div class="links">
-      <a class="links__logo" href="index.html" title="перейти на главную страницу сайта">
+    <div class="links" >
+      <a class="links__logo" href="index.html" title="перейти на главную страницу сайта" id="top">
         <svg xmlns="http://www.w3.org/2000/svg"
              width="176.000000pt" height="176.000000pt" viewBox="0 0 176.000000 176.000000"
              preserveAspectRatio="xMidYMid meet">
@@ -139,11 +140,12 @@
         </ul>
       </div>
     </nav>
+
   </header>
   <main>
     <div class="wrapper">
       <div class="motto">
-        <video autoplay muted loop id="myVideo">
+        <video autoplay muted loop id="myVideo" poster="images/preload_background.png">
           <source
               src="images/video_background.mp4"
               type="video/mp4">
@@ -303,6 +305,9 @@
     <p class="footer__copyright">© <a href="">Custom Car</a>. Информация, представленная на сайте, защищена законом об
       авторских правах. Копирование и
       использование любой информации запрещено.</p>
+    <a id="upbutton" href="#" onclick="smoothJumpUp(); return false;">
+      <img src="images/up.png" alt="Top" title="Наверх">
+    </a>
   </footer>
 </body>
 </html>

@@ -1,3 +1,39 @@
-li > a[href="dry_cleaning.html"] { /* скрываю пункт меню этой страницы из header и из footer */
+/*
+li > a[href="dry_cleaning.html"] { !* скрываю пункт меню этой страницы из header и из footer *!
     display: none;
+}*/
+
+
+.table-other {
+    font-family: Proxima Nova Regular;
+    padding-bottom: 30px;
+}
+
+.first-name {
+    width: 222px;
+    padding-left: 0;
+    font-weight: 800;
+    font-size: 9px;
+}
+
+.table-other .row-class {
+    position: relative;
+}
+
+span.item-row {
+    font-size: 2.7rem;
+}
+
+span.rev {
+    font-size: .45rem;
+}
+
+.table-other .row-class {
+    position: relative;
+}
+
+.row-class {
+    width: 1px;
+    min-width: 33px;
+    text-align: center;
 }
