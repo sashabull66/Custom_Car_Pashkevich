@@ -3,37 +3,59 @@ li > a[href="dry_cleaning.html"] { !* скрываю пункт меню это�
     display: none;
 }*/
 
+.cleaning {
 
-.table-other {
-    font-family: Proxima Nova Regular;
-    padding-bottom: 30px;
 }
 
-.first-name {
-    width: 222px;
-    padding-left: 0;
-    font-weight: 800;
-    font-size: 9px;
+.cleaning__demo-video {
+    width: 60vw;
+    margin: 1rem 0 1rem 10vw;
+    border-radius: 10px;
+
 }
 
-.table-other .row-class {
-    position: relative;
+.cleaning__title {
+
 }
 
-span.item-row {
-    font-size: 2.7rem;
+.cleaning__sup-title {
+
 }
 
-span.rev {
-    font-size: .45rem;
+.cleaning__sub-title {
+
 }
 
-.table-other .row-class {
-    position: relative;
+.ceramics__content {
+
 }
 
-.row-class {
-    width: 1px;
-    min-width: 33px;
-    text-align: center;
+.cleaning__img {
+
+}
+
+@media (max-width: 770px){
+    .cleaning__img {
+        width: 60vw;
+        left: 10vw;
+    }
+}
+
+@media (max-width: 381px){
+    .cleaning {
+        width: 22rem;
+        left: 1rem;
+    }
+
+    .cleaning__demo-video {
+        width: 100%;
+        border-radius: inherit;
+        margin: 0;
+    }
+
+    .cleaning__img {
+        width: 100%;
+        left: 0vw;
+    }
+
 }
