@@ -1,7 +1,7 @@
 let smoothJumpUp = function() {
     if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-        window.scrollBy(0,-10);
-        setTimeout(smoothJumpUp, 1);
+        window.scrollBy(0,-30);
+        setTimeout(smoothJumpUp, 0.5);
     }
 }
 

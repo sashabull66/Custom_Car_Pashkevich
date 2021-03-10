@@ -33,12 +33,127 @@ li > a[href="dry_cleaning.html"] { !* скрываю пункт меню это�
 .cleaning__img {
 
 }
+/*********************************************/
+.cleaning__table {
+    width: 70vw;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+td {
+    border: 1px solid rgb(239,220,233);
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    background-color: rgb(241,238,230);
+}
+
+th {
+    background-color: rgb(247,246,243);
+    border: 1px solid rgb(239,220,233);
+    border-right: none;
+    text-align: left;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+th,
+td {
+    padding: 0.5rem;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.row {
+    position: relative;
+    left: 1rem;
+    top: 0.68rem;
+    font-size: 3em;
+}
+
+.column {
+    display: inline-block;
+    letter-spacing: 0.03rem;
+    transform: rotate(270deg);
+    position: relative;
+    left: 0.1rem;
+    top: -0.1rem;
+    font-size: 0.8em;
+}
+
+.row,
+.column {
+    color: rgb(197,178,125);
+}
+
+.first-line > td, .first-line > th {
+    border: none;
+    padding: 0;
+    background-color: inherit;
+}
+
+.first-line {
+    font-family: unset;
+    height: 3.6rem;
+    text-align: right;
+    padding: 0;
+}
+
+.first-line a {
+    text-decoration: none;
+}
+
+.first-line > span {
+    display: inline-block;
+    position: relative;
+    left: 1rem;
+}
+
+.first-line > th > span {
+    text-transform: uppercase;
+    position: relative;
+    top: 0.7rem;
+    left: 0.5rem;
+}
+@media (max-width: 930px){
+    .row {
+        display: block;
+        position: unset;
+        line-height: 25px;
+    }
+
+    .column {
+        display: unset;
+    }
+}
+
+@media (max-width: 919px){
+}
 
 @media (max-width: 770px){
-    .cleaning__img {
-        width: 60vw;
-        left: 10vw;
+    .cleaning__demo-video {
+        width: 80vw;
+        margin: 1rem 0 1rem 0;
+        border-radius: unset;
     }
+
+    .cleaning__img {
+        width: 80vw;
+        left: 0;
+    }
+
+    .cleaning__content {
+        font-size: 0.9rem;
+    }
+
+    .cleaning__table {
+        width: 100%;
+        font-size: 12px;
+    }
+
 }
 
 @media (max-width: 381px){
@@ -46,16 +161,4 @@ li > a[href="dry_cleaning.html"] { !* скрываю пункт меню это�
         width: 22rem;
         left: 1rem;
     }
-
-    .cleaning__demo-video {
-        width: 100%;
-        border-radius: inherit;
-        margin: 0;
-    }
-
-    .cleaning__img {
-        width: 100%;
-        left: 0vw;
-    }
-
 }
