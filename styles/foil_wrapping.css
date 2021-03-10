@@ -4,3 +4,79 @@ li > a[href="foil_wrapping.html"] { !* скрываю пункт меню это
 }
 */
 
+.foil {
+
+}
+
+.foil__title {
+
+}
+
+.foil__sup-title {
+    margin: 0.67em 0 0.67em 0;
+
+}
+
+.foil__content {
+
+}
+
+.foil__sub-title {
+    padding: 0.5em 0;
+
+}
+
+.foil__img {
+
+}
+
+.foil__list { /* UL */
+    list-style: none;
+
+}
+
+.foil__list-item { /* LI */
+    margin-left: 0.9rem;
+}
+
+.foil__list-item:before {
+    content: "✔";
+    display: inline-block;
+    margin-right: 0.3rem;
+}
+
+sup {
+    top: -0.1em;
+    font-size: 1.1em;
+}
+
+@media (max-width: 381px) {
+    .foil {
+        width: 20rem;
+        left: 1.8rem;
+        font-size: 15px;
+    }
+
+    .foil__title {
+        margin: 0.3em 0;
+        font-size: 1.5em;
+    }
+
+    .foil__img {
+        width: 97%;
+        left: 1.5%;
+    }
+
+    .foil__list {
+        list-style: none;
+        margin: 0.6rem 0 0.6rem 0;
+        letter-spacing: 0.03rem;
+    }
+
+    .foil__list-item {
+        margin-left: 0;
+        padding: 0.2rem 0;
+    }
+
+}
+
