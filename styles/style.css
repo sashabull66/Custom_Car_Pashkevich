@@ -12,7 +12,6 @@ li > a[href="index.html"] { /* скрываю пункт меню этой ст�
 
 main {
     max-width: 100%;
-    background-color: rgb(61, 68, 75);
 }
 
 .wrapper { /* обертка */
@@ -150,6 +149,11 @@ main > .wrapper {
     text-transform: uppercase;
 }
 
+.portfolio-slider {
+    width: 75%;
+    margin: 1.5rem auto;
+}
+
 @media (max-width: 1110px) {
     body {
         font-size: 10px;
@@ -184,6 +188,10 @@ main > .wrapper {
     .motto__title {
         letter-spacing: 3px;
     }
+
+    .portfolio-slider {
+        width: 85%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -195,7 +203,9 @@ main > .wrapper {
         border-right: 2px solid rgb(163, 116, 41);
         padding-right: 0.33em;
     }
-
+    .portfolio-slider {
+        width: 95%;
+    }
 }
 
 @media (max-width: 345px) {
