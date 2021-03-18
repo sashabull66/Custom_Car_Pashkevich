@@ -6,6 +6,8 @@
 html {
     -ms-overflow-style: none;  !* убираю скролл IE 10+ *!
 }*/
+@import "slider__styles.css";
+
 li > a[href="index.html"] { /* скрываю пункт меню этой страницы из header и из footer */
     display: none;
 }
@@ -45,7 +47,7 @@ main > .wrapper {
 .motto__title, .motto__body {
     text-align: left;
     color: rgb(163, 153, 41);
-    text-transform: uppercase ;
+    text-transform: uppercase;
 }
 
 .motto__title {
@@ -99,11 +101,11 @@ main > .wrapper {
 }
 
 .reviews__title {
-    border-bottom: 4px solid rgb(163,116,41);
+    border-bottom: 4px solid rgb(163, 116, 41);
     display: inline-block;
     width: 80%;
     margin: 2% 10% 0 10%;;
-    color: rgb(163,116,41);
+    color: rgb(163, 116, 41);
     font-size: 2.5em;
     font-weight: 600;
 }
@@ -146,12 +148,19 @@ main > .wrapper {
 }
 
 .portfolio__title {
-    text-transform: uppercase;
 }
 
-.portfolio-slider {
-    width: 75%;
-    margin: 1.5rem auto;
+.portfolio__title, .portfolio__sup-title {
+    margin: 0.67em 4.5rem;
+}
+
+.portfolio__sup-title {
+}
+
+.slider {
+    position: relative;
+    top: 15px;
+    left: calc(50% - var(--slider-width)/2);
 }
 
 @media (max-width: 1110px) {
@@ -160,7 +169,7 @@ main > .wrapper {
     }
 }
 
-@media (max-width: 770px){
+@media (max-width: 770px) {
     .reviews__area {
         display: flex;
         justify-content: space-between;
@@ -203,6 +212,7 @@ main > .wrapper {
         border-right: 2px solid rgb(163, 116, 41);
         padding-right: 0.33em;
     }
+
     .portfolio-slider {
         width: 95%;
     }
