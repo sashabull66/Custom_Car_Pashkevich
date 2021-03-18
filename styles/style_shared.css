@@ -156,9 +156,9 @@ nav { /* основное меню */
 }
 
 .main__img { /* контентные изображенрия на странице */
-    width: 40vw;
+    width: 60vw;
     position: relative;
-    left: 20vw;
+    left: 10vw;
     margin-top: 1rem;
     margin-bottom: 1rem;
     box-shadow: 0 0 28px 0 rgba(0, 0, 0, 1);
@@ -650,3 +650,11 @@ footer { /*!!!!!!!!*/
 }
 
 /*------------/FOOTER------------*/
+
+.remove {
+    display: none!important;
+}
+
+.display {
+    display: block!important;
+}

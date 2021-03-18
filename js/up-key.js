@@ -1,15 +1,12 @@
-let smoothJumpUp = function() {
-    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-        window.scrollBy(0,-30);
-        setTimeout(smoothJumpUp, 0.5);
-    }
-}
-
-window.onscroll = function() {
-    let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrolled > 100) {
-        document.getElementById('upbutton').style.display = 'block';
+window.onscroll = function () { /* выполнить при скроле*/
+    const upbutton = document.getElementById('upbutton'); /* переменная в которой элемент-кнопка */
+    const scrolled = window.pageYOffset || document.documentElement.scrollTop; /* переменная в которой текущее состояние скролла и текущей прокрутки*/
+    if (scrolled > 100) { /* если текущее положение скролла больше 100px... */
+        upbutton.style.display = 'block'; /* отображаю кнопку */
+        upbutton.addEventListener('click', function () { /* навешиваю на кнопку слушателя-клика */
+            window.scrollTo({top: 0, behavior: "smooth"}); /* при клике отмотать скрол в начало т перейти к else */
+        })
     } else {
-        document.getElementById('upbutton').style.display = 'none';
+        upbutton.style.display = 'none'; /* после перемотки выше условие неверно -> скрыть кнопку */
     }
 }
