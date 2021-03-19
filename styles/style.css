@@ -7,6 +7,7 @@ html {
     -ms-overflow-style: none;  !* убираю скролл IE 10+ *!
 }*/
 @import "slider__styles.css";
+@import "slider__rew-styles.css";
 
 li > a[href="index.html"] { /* скрываю пункт меню этой страницы из header и из footer */
     display: none;
@@ -111,15 +112,12 @@ main > .wrapper {
 }
 
 .reviews__area {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 5rem;
+    /* display: flex;
+     justify-content: space-between;
+     padding: 0 5rem;*/
 }
 
 .reviews__post {
-    display: flex;
-    flex-direction: column;
-    width: 15%;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 }
@@ -127,7 +125,7 @@ main > .wrapper {
 .reviews__photo {
     max-width: 10em;
     max-height: 10em;
-    margin: 0 auto;
+    margin-left: calc(50% - 5em);
     border-radius: 50%;
 }
 
@@ -140,7 +138,7 @@ main > .wrapper {
 
 .reviews__text {
     text-align: justify;
-    font-size: 0.9em;
+    font-size: 1.5em;
     color: gray;
 }
 
@@ -167,6 +165,17 @@ main > .wrapper {
     body {
         font-size: 10px;
     }
+}
+
+@media (max-width: 875px) {
+    .slider {
+        top: 10px;
+    }
+    :root {
+        --slider-width: 80vw; /* общая ширина для видимого окна слайдера и для одного слайда */
+        --slider-height: 50vw; /* общая высота для видимого окна слайдера и для одного слайда */
+    }
+
 }
 
 @media (max-width: 770px) {

@@ -2,7 +2,7 @@ let slidesCollection = document.querySelectorAll('.slider__item'); /* добав
 let quantitySlides = slidesCollection.length; /* получаю количество слайдов для счетчика */
 let slidesWidth = document.getElementById('slider__line').offsetWidth; /* получаю по id ширину линии (сумма ширин всех слайдов) */
 const step = slidesWidth / quantitySlides; /* получаю шаг сдвига равный общей ширине / колличество слайдов */
-let temp = -2550; /* переменная счетчик -Math.round((quantitySlides * step / 2)/step) */
+let temp = -(step * 4); /* переменная счетчик -Math.round((quantitySlides * step / 2)/step) */
 console.log(temp);
 
 document.getElementById('slider__line').style.transition = 'none'; /* убираю анимацию для мгновенной загрузки первого слайда */

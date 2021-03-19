@@ -1,0 +1,103 @@
+:root {
+    --reviews-slider-width: 80vw; /* общая ширина для видимого окна слайдера и для одного слайда */
+    --reviews-slider-height: 30em; /* общая высота для видимого окна слайдера и для одного слайда */
+    --button-top: calc(50% - 25px); /* общий отступ сверху для кнопок переключения слайдера */
+    --button--width: 50px; /* общая ширина кнопок */
+    --button--height: 50px; /* общая ширина кнопок */
+    --button--radius: 50%; /* общая ширина кнопок */
+    --button-direction-color: rgb(255, 255, 255); /* общий цвет стрелок */
+}
+
+.reviews__slider { /* видимая область слайдера */
+    width: var(--reviews-slider-width);
+    height: var(--reviews-slider-height);
+    position: relative;
+    overflow: hidden;
+    left: calc(50% - var(--reviews-slider-width)/2);
+}
+
+#reviews__left { /* кнопка влево */
+    left: 0;
+    top: 15%;
+}
+
+#reviews__left:before { /* составная часть стрелки влево */
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 3px;
+    background-color: var(--button-direction-color);
+    z-index: 3;
+    transform: translate(60%, 200%) rotate(-45deg);
+}
+
+#reviews__left:after { /* составная часть стрелки влево */
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 3px;
+    background-color: var(--button-direction-color);
+    z-index: 3;
+    transform: translate(-37%, 609%) rotate(45deg);
+}
+
+#reviews__right { /* кнопка влево */
+    left: 0;
+    top: 30%;
+}
+
+#reviews__right:before { /* составная часть стрелки вправо */
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 3px;
+    background-color: var(--button-direction-color);
+    z-index: 3;
+    transform: translate(90%, 200%) rotate(-145deg);
+}
+
+#reviews__right:after { /* составная часть стрелки вправо */
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 3px;
+    background-color: var(--button-direction-color);
+    z-index: 3;
+    transform: translate(-13%, 609%) rotate(-45deg);
+}
+
+#reviews__right, #reviews__left { /* общие стили для обеих кнопок */
+    position: absolute;
+    width: var(--button--width);
+    height: var(--button--height);
+    border-radius: var(--button--radius);
+    margin: auto 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.reviews__line { /* контейнер для слайдов */
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    left: 0;
+    transition: all ease 1s;
+    max-height: var(--reviews-slider-height);
+}
+
+.reviews__item { /* один слайд */
+    width: var(--reviews-slider-width);
+    height: var(--reviews-slider-height);
+}
+
+/* **** Структура HTML ****
+<div class="reviews__slider" id="reviews__slider">
+  <span id="reviews__left" onclick="control(2)"></span>
+  <span id="reviews__right" onclick="control(1)"></span>
+  <div class="reviews__line" id="slider__line">
+    <div class="reviews__item">....</div>
+    <div class="reviews__item">....</div>
+  </div>
+</div>
+*/

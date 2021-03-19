@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/style_shared.css">
     <link rel="stylesheet" href="styles/style.css">
-    <script src="js/ism-2.2.min.js"></script>
 </head>
 <body>
     <header>
@@ -181,119 +180,183 @@
                 <div class="reviews">
                     <p class="reviews__title">О нас пишут:</p>
                     <div class="reviews__area">
-                        <div class="reviews__post">
-                            <img src="images/reviwers_photo/1.png" alt="" class="reviews__photo">
-                            <p class="reviews__name">Мария</p>
-                            <p class="reviews__text">У нас в семье немецкая овчарка, с которой мы часто выезжаем в лес
-                                или еще куда
-                                погулять в безлюдные места. Он очень любит купаться, и если находит водоем, то его уже
-                                не остановить. Я
-                                думаю вы представляете какой запах в машине после мокрой собаки, да и грязи. Мы
-                                пробовали сами чистить,
-                                но в итоге поняли, что без профессиональной химчистки авто нам не обойтись. Обратились в
-                                Custom Car и
-                                вот что я хочу написать. 1. После химчистки машины неприятный запах пропал. 2. Была
-                                приятно удивлена,
-                                что ребята добрались и до дверных проемов, колесных дисков, обычно там все равно
-                                оставалось грязно. 3. Я
-                                думала салон будет влажный, а он оказался полностью сухой. Итог: осталась полностью
-                                довольна химчисткой
-                                нашего автомобиля. </p>
+                        <div class="reviews__slider" id="reviews__slider">
+                            <span id="reviews__left" onclick="reviews(2)"></span>
+                            <span id="reviews__right" onclick="reviews(1)"></span>
+                            <div class="reviews__line" id="reviews__line">
+                                <div class="reviews__item">
+                                    <div class="reviews__post">
+                                        <img src="images/reviwers_photo/1.png" alt="" class="reviews__photo">
+                                        <p class="reviews__name">Мария</p>
+                                        <p class="reviews__text">У нас в семье немецкая овчарка, с которой мы часто
+                                            выезжаем в лес
+                                            или еще куда
+                                            погулять в безлюдные места. Он очень любит купаться, и если находит водоем,
+                                            то его уже
+                                            не остановить. Я
+                                            думаю вы представляете какой запах в машине после мокрой собаки, да и грязи.
+                                            Мы
+                                            пробовали сами чистить,
+                                            но в итоге поняли, что без профессиональной химчистки авто нам не обойтись.
+                                            Обратились в
+                                            Custom Car и
+                                            вот что я хочу написать. 1. После химчистки машины неприятный запах пропал.
+                                            2. Была
+                                            приятно удивлена,
+                                            что ребята добрались и до дверных проемов, колесных дисков, обычно там все
+                                            равно
+                                            оставалось грязно. 3. Я
+                                            думала салон будет влажный, а он оказался полностью сухой. Итог: осталась
+                                            полностью
+                                            довольна химчисткой
+                                            нашего автомобиля. </p>
+                                    </div>
+                                </div>
+                                <div class="reviews__item">
+                                    <div class="reviews__post">
+                                        <img src="images/reviwers_photo/2.png" alt="" class="reviews__photo">
+                                        <p class="reviews__name">Владислав</p>
+                                        <p class="reviews__text">Покупал в Минске первую машину Audi A5 (T8). Обклеивал
+                                            виниловой
+                                            плёнкой (чёрный
+                                            глянец) Автомобиль б/у и с большим количеством дефектов на кузове, так что я
+                                            сделал
+                                            полировку кузова,
+                                            что очень освежило автомобиль. После поклейки автомобиль был как новый.
+                                            Когда
+                                            присутствовал на поклейке,
+                                            очень порадовало отношение мастеров к работе, всё выполнялось аккуратно, не
+                                            царапая
+                                            кузов при наложении,
+                                            как это обычно бывает в других компаниях. Очень приятно было наблюдать за
+                                            работой
+                                            настоящих мастеров.
+                                            Всем советую, если захотите освежить своё авто!</p>
+                                    </div>
+                                </div>
+                                <div class="reviews__item">
+                                    <div class="reviews__post">
+                                        <img src="images/reviwers_photo/3.png" alt="" class="reviews__photo">
+                                        <p class="reviews__name">Григорий</p>
+                                        <p class="reviews__text">Мой автомобиль уже не новый и начал терять свою былую
+                                            привлекательность. Здесь
+                                            сделали мне полировку кузова и фар автомобиля. Что естественно является и
+                                            защитой от
+                                            повреждений. Мой
+                                            автомобиль сразу засиял после их полировки, так как они использовали
+                                            качественные
+                                            материалы и
+                                            оборудование. Услуга конечно эта стоит определённых денег, но оно стоит
+                                            этого.</p>
+                                    </div>
+                                </div>
+                                <div class="reviews__item">
+                                    <div class="reviews__post">
+                                        <img src="images/reviwers_photo/4.png" alt="" class="reviews__photo">
+                                        <p class="reviews__name">Виктор</p>
+                                        <p class="reviews__text">Обращался в этот сервис. Машина далеко не новая, и
+                                            нужна была
+                                            полировка фар. С
+                                            утра приехал, после обеда сразу машину уже забрал. Сделали оперативно и
+                                            очень
+                                            качественно! Цена не
+                                            накрученная, вполне адекватная. Спасибо, теперь я Ваш постоянный клиент.</p>
+                                    </div>
+                                </div>
+                                <div class="reviews__item">
+                                    <div class="reviews__post">
+                                        <img src="images/reviwers_photo/5.png" alt="" class="reviews__photo">
+                                        <p class="reviews__name">Елизавета</p>
+                                        <p class="reviews__text">Обращались с мужем в Custom Car для того, чтобы сделать
+                                            защитное
+                                            покрытие
+                                            кузова на свой автомобиль. Цены приятно удивили, двухслойное керамическое
+                                            покрытие
+                                            обошлось нам всего в
+                                            1000руб. Заказ на сайте делать очень удобно, понятное и яркое оформление,
+                                            несколько
+                                            способов оплаты и
+                                            доставки.
+                                            Мы довольны :)</p>
+                                    </div>
+                                </div>
+                                <div class="reviews__item">
+                                    <div class="reviews__post">
+                                        <img src="images/reviwers_photo/6.png" alt="" class="reviews__photo">
+                                        <p class="reviews__name">Михаил</p>
+                                        <p class="reviews__text">Оставили с супругой такую оценку 5*, так как данный
+                                            сервис,
+                                            великолепный и вежливый персонал и самое главное качество их работы
+                                            превзошел все наши
+                                            ожидания. Последствием
+                                            некачественной мойки нашей машины оказались тускнеющие пятна на видных
+                                            местах, что очень
+                                            сильно влияет
+                                            на весь настрой перед встречами, работой и т.д. Очень долго откладывали
+                                            поход к фирмам
+                                            по полировке авто
+                                            и хорошо, так как чуть позже обратили свое внимание на Custom Car,
+                                            предоставляющие
+                                            услуги по полировке
+                                            авто в г. Гродно. Машина вышла как новая. До сих пор не может налюбоваться.
+                                            Благодарю
+                                            вас!!! И держите честный отзыв и оценку 5*!</p>
+                                    </div>
+                                </div>
+                                <div class="reviews__item">
+                                    <div class="reviews__post">
+                                        <img src="images/reviwers_photo/7.png" alt="" class="reviews__photo">
+                                        <p class="reviews__name">Матвей</p>
+                                        <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit. Ab ad
+                                            aspernatur aut, commodi consequatur consequuntur dolor dolore doloremque
+                                            doloribus ea
+                                            eligendi enim excepturi impedit inventore labore laboriosam laudantium nobis
+                                            officiis
+                                            pariatur provident quae qui quisquam quo repellendus suscipit tempora
+                                            tempore!</p>
+                                    </div>
+                                </div>
+                                <div class="reviews__item">
+                                    <div class="reviews__post">
+                                        <img src="images/reviwers_photo/8.png" alt="" class="reviews__photo">
+                                        <p class="reviews__name">Виталина</p>
+                                        <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit. Eligendi
+                                            omnis provident ratione! Accusantium, aliquid blanditiis dignissimos dolore,
+                                            enim et ex
+                                            excepturi fuga id officiis quos sint totam vero. A aliquid atque autem
+                                            cumque debitis
+                                            dolorem doloremque dolores ducimus est facere hic, illo impedit iste
+                                            molestias nam
+                                            necessitatibus non perferendis porro provident quia rerum similique
+                                            temporibus. Autem,
+                                            consequatur eaque est eum fugiat illum neque nulla quos ratione saepe soluta
+                                            unde
+                                            veniam.</p>
+                                    </div>
+                                </div>
+                                <div class="reviews__item">
+                                    <div class="reviews__post">
+                                        <img src="images/reviwers_photo/9.png" alt="" class="reviews__photo">
+                                        <p class="reviews__name">Витёк</p>
+                                        <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit. Alias
+                                            animi consequuntur corporis culpa cumque dolor doloribus, impedit, incidunt
+                                            iste itaque
+                                            laboriosam laborum, minus nam necessitatibus nemo nobis quaerat quasi
+                                            quibusdam quisquam
+                                            repudiandae saepe sapiente sint velit. Consectetur dolorem, incidunt magnam
+                                            odit
+                                            officiis quae? Accusantium architecto asperiores consequatur consequuntur
+                                            dolorem, et
+                                            fuga id libero maxime minima nihil nisi omnis quaerat quisquam reiciendis
+                                            repellendus
+                                            suscipit vitae. A dignissimos dolore magnam officiis quo?</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="reviews__post">
-                            <img src="images/reviwers_photo/2.png" alt="" class="reviews__photo">
-                            <p class="reviews__name">Владислав</p>
-                            <p class="reviews__text">Покупал в Минске первую машину Audi A5 (T8). Обклеивал виниловой
-                                плёнкой (чёрный
-                                глянец) Автомобиль б/у и с большим количеством дефектов на кузове, так что я сделал
-                                полировку кузова,
-                                что очень освежило автомобиль. После поклейки автомобиль был как новый. Когда
-                                присутствовал на поклейке,
-                                очень порадовало отношение мастеров к работе, всё выполнялось аккуратно, не царапая
-                                кузов при наложении,
-                                как это обычно бывает в других компаниях. Очень приятно было наблюдать за работой
-                                настоящих мастеров.
-                                Всем советую, если захотите освежить своё авто!</p>
-                        </div>
-                        <div class="reviews__post">
-                            <img src="images/reviwers_photo/3.png" alt="" class="reviews__photo">
-                            <p class="reviews__name">Григорий</p>
-                            <p class="reviews__text">Мой автомобиль уже не новый и начал терять свою былую
-                                привлекательность. Здесь
-                                сделали мне полировку кузова и фар автомобиля. Что естественно является и защитой от
-                                повреждений. Мой
-                                автомобиль сразу засиял после их полировки, так как они использовали качественные
-                                материалы и
-                                оборудование. Услуга конечно эта стоит определённых денег, но оно стоит этого.</p>
-                        </div>
-                        <div class="reviews__post">
-                            <img src="images/reviwers_photo/4.png" alt="" class="reviews__photo">
-                            <p class="reviews__name">Виктор</p>
-                            <p class="reviews__text">Обращался в этот сервис. Машина далеко не новая, и нужна была
-                                полировка фар. С
-                                утра приехал, после обеда сразу машину уже забрал. Сделали оперативно и очень
-                                качественно! Цена не
-                                накрученная, вполне адекватная. Спасибо, теперь я Ваш постоянный клиент.</p>
-                        </div>
-                        <div class="reviews__post">
-                            <img src="images/reviwers_photo/5.png" alt="" class="reviews__photo">
-                            <p class="reviews__name">Елизавета</p>
-                            <p class="reviews__text">Обращались с мужем в Custom Car для того, чтобы сделать защитное
-                                покрытие
-                                кузова на свой автомобиль. Цены приятно удивили, двухслойное керамическое покрытие
-                                обошлось нам всего в
-                                1000руб. Заказ на сайте делать очень удобно, понятное и яркое оформление, несколько
-                                способов оплаты и
-                                доставки.
-                                Мы довольны :)</p>
-                        </div>
-                        <div class="reviews__post">
-                            <img src="images/reviwers_photo/6.png" alt="" class="reviews__photo">
-                            <p class="reviews__name">Михаил</p>
-                            <p class="reviews__text">Оставили с супругой такую оценку 5*, так как данный сервис,
-                                великолепный и вежливый персонал и самое главное качество их работы превзошел все наши
-                                ожидания. Последствием
-                                некачественной мойки нашей машины оказались тускнеющие пятна на видных местах, что очень
-                                сильно влияет
-                                на весь настрой перед встречами, работой и т.д. Очень долго откладывали поход к фирмам
-                                по полировке авто
-                                и хорошо, так как чуть позже обратили свое внимание на Custom Car, предоставляющие
-                                услуги по полировке
-                                авто в г. Гродно. Машина вышла как новая. До сих пор не может налюбоваться. Благодарю
-                                вас!!! И держите честный отзыв и оценку 5*!</p>
-                        </div>
-                        <div class="reviews__post">
-                            <img src="images/reviwers_photo/7.png" alt="" class="reviews__photo">
-                            <p class="reviews__name">Матвей</p>
-                            <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad
-                                aspernatur aut, commodi consequatur consequuntur dolor dolore doloremque doloribus ea
-                                eligendi enim excepturi impedit inventore labore laboriosam laudantium nobis officiis
-                                pariatur provident quae qui quisquam quo repellendus suscipit tempora tempore!</p>
-                        </div>
-
-                        <div class="reviews__post">
-                            <img src="images/reviwers_photo/8.png" alt="" class="reviews__photo">
-                            <p class="reviews__name">Виталина</p>
-                            <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi
-                                omnis provident ratione! Accusantium, aliquid blanditiis dignissimos dolore, enim et ex
-                                excepturi fuga id officiis quos sint totam vero. A aliquid atque autem cumque debitis
-                                dolorem doloremque dolores ducimus est facere hic, illo impedit iste molestias nam
-                                necessitatibus non perferendis porro provident quia rerum similique temporibus. Autem,
-                                consequatur eaque est eum fugiat illum neque nulla quos ratione saepe soluta unde
-                                veniam.</p>
-                        </div>
-                        <div class="reviews__post">
-                            <img src="images/reviwers_photo/9.png" alt="" class="reviews__photo">
-                            <p class="reviews__name">Витёк</p>
-                            <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
-                                animi consequuntur corporis culpa cumque dolor doloribus, impedit, incidunt iste itaque
-                                laboriosam laborum, minus nam necessitatibus nemo nobis quaerat quasi quibusdam quisquam
-                                repudiandae saepe sapiente sint velit. Consectetur dolorem, incidunt magnam odit
-                                officiis quae? Accusantium architecto asperiores consequatur consequuntur dolorem, et
-                                fuga id libero maxime minima nihil nisi omnis quaerat quisquam reiciendis repellendus
-                                suscipit vitae. A dignissimos dolore magnam officiis quo?</p>
-                        </div>
-
                     </div>
                 </div>
 
@@ -405,5 +468,6 @@
     <script src="js/up-key.js"></script>
     <script src="js/burger-menu___cheker.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/slider__rew.js"></script>
 </body>
 </html>
