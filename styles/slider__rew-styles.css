@@ -82,7 +82,7 @@
     flex-direction: row;
     top: 0;
     left: 0;
-    transition: all ease 1s;
+    transition: all cubic-bezier(0.76, 0.18, 0, 1.17) 1s;
     max-height: var(--reviews-slider-height);
 }
 

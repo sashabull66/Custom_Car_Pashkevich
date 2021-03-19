@@ -112,9 +112,6 @@ main > .wrapper {
 }
 
 .reviews__area {
-    /* display: flex;
-     justify-content: space-between;
-     padding: 0 5rem;*/
 }
 
 .reviews__post {
@@ -165,17 +162,54 @@ main > .wrapper {
     body {
         font-size: 10px;
     }
+
+    #reviews__left {
+        top: 8%;
+    }
+
+    #reviews__left:before {
+        transform: translate(60%, 330%) rotate(-45deg);;
+    }
+
+    #reviews__left:after {
+        transform: translate(-37%, 750%) rotate(45deg);
+    }
+
+    #reviews__right:before {
+        transform: translate(90%, 330%) rotate(-145deg);
+    }
+
+    #reviews__right:after {
+        transform: translate(-13%, 750%) rotate(-45deg);
+    }
+
+    #slider__left:before {
+        transform: translate(60%, 330%) rotate(-45deg);;
+    }
+
+    #slider__left:after {
+        transform: translate(-37%, 750%) rotate(45deg);
+    }
+
+    #slider__right:before {
+        transform: translate(90%, 330%) rotate(-145deg);
+    }
+
+    #slider__right:after {
+        transform: translate(-13%, 750%) rotate(-45deg);
+    }
 }
 
 @media (max-width: 875px) {
     .slider {
         top: 10px;
     }
+
     :root {
         --slider-width: 80vw; /* общая ширина для видимого окна слайдера и для одного слайда */
         --slider-height: 50vw; /* общая высота для видимого окна слайдера и для одного слайда */
+        --reviews-slider-height: 33em;
     }
-
 }
 
 @media (max-width: 770px) {
@@ -210,6 +244,20 @@ main > .wrapper {
     .portfolio-slider {
         width: 85%;
     }
+
+    .slider {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 716px) {
+    #reviews__left {
+        top: 5%;
+    }
+
+    #reviews__right {
+        top: 21%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -217,9 +265,24 @@ main > .wrapper {
         flex-basis: 49%;
     }
 
-    .reviews__post:nth-child(odd) {
-        border-right: 2px solid rgb(163, 116, 41);
-        padding-right: 0.33em;
+    .reviews__text {
+        font-size: 1.2em;
+    }
+
+    :root {
+        --reviews-slider-height: 39em;
+    }
+
+    #reviews__left {
+        top: 5%;
+    }
+
+    .portfolio__title, .portfolio__sup-title {
+        margin: 0.67em 1.5rem;
+    }
+
+    .portfolio__sup-title {
+        font-size: 1.3em;
     }
 
     .portfolio-slider {
