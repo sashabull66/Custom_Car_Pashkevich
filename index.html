@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <link rel="manifest" href="manifest.json">
 <head>
+    <meta charset="UTF-8">
+    <title>CustomCar Detailing</title>
+    <link rel="shortcut icon" href="images/title_icon.png">
     <link rel="manifest" href="manifest.json">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -14,17 +17,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" sizes="68x71" href="images/title_icon.png">
     <link rel="apple-touch-icon" sizes="68x71" href="images/title_icon.png">
-
-    <meta charset="UTF-8">
-    <title>CustomCar Detailing</title>
-    <link rel="shortcut icon" href="images/title_icon.png">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/style_shared.css">
     <link rel="stylesheet" href="styles/style.css">
+
 </head>
 <body>
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
     <header>
         <div class="links">
             <a class="links__logo" href="index.html" title="перейти на главную страницу сайта" id="top">

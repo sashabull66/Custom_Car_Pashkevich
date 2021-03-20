@@ -12,7 +12,6 @@ function reviews (direction) {
     leftPosition = parseInt(getComputedStyle(document.getElementById('reviews__line')).left, 10); /* проверяю текущее положение линии с слайдерами относительно данных в стилях left и перевожу это в численное значение */
     minLeft = -(slidesWidth2 - step2 * 2); /* минимальное положение слайдера влево */
 
-
     if (leftPosition > minLeft && direction === 1) { /* право */ /* при клике на кнопку left выполняется это условие */
         temp2 = temp2 - step2;
         document.getElementById('reviews__line').style.left = temp2 + 'px';
