@@ -1,0 +1,6 @@
+:root {
+    --main-color: rgb(163, 116, 41); /* основной цвет */
+    --link-hover-color: rgb(209, 163, 92); /* цвет при наведении на ссылки */
+    --black-color: rgb(0, 0, 0);
+    --white-color: rgb(255, 255, 255);
+}

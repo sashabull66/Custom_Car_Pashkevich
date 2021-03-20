@@ -1,0 +1,14 @@
+{
+  "name": "Custom Car Autostyling Studio",
+  "short_name": "Custom Car",
+  "lang": "ru-EN",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color" : "#fff",
+  "icons": [
+    {
+      "src": "images / title_icon.png",
+      "sizes": "68x71"
+    }
+  ]
+}

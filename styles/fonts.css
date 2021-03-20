@@ -46,11 +46,3 @@
 body {
     font-family: Gilroy, serif; /*задаю общий для body шрифт*/
 }
-
-h3 {
-    font-family: Gilroy, serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 24px;
-}

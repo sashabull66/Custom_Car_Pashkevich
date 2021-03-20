@@ -1,26 +1,491 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+<link rel="manifest" href="manifest.json">
 <head>
-  <meta charset="UTF-8">
-  <title>index</title>
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/fonts.css">
-  <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <title>CustomCar Detailing</title>
+    <link rel="shortcut icon" href="images/title_icon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Custom Car">
+    <meta name="apple-mobile-web-app-title" content="Custom Car">
+    <meta name="theme-color" content="#FFFFFF">
+    <meta name="msapplication-navbutton-color" content="#FFFFFF">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" sizes="68x71" href="images/title_icon.png">
+    <link rel="apple-touch-icon" sizes="68x71" href="images/title_icon.png">
+    <link rel="stylesheet" href="styles/style_shared.css">
+    <link rel="stylesheet" href="styles/style.css">
+
 </head>
 <body>
-  <header>
-    <div>Custom Car</div>
-  </header>
-  <nav>
-    <ul class="menu">
-      <li><a href="">Нанопокрытие</a></li>
-      <li><a href="">Оклейка</a></li>
-      <li><a href="">Полировка</a></li>
-      <li><a href="">Тонировка</a></li>
-      <li><a href="">Химчистка</a></li>
-    </ul>
-  </nav>
-  <main></main>
-  <footer></footer>
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
+    <header>
+        <div class="links">
+            <a class="links__logo" href="index.html" title="перейти на главную страницу сайта" id="top">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="176.000000pt" height="176.000000pt" viewBox="0 0 176.000000 176.000000"
+                     preserveAspectRatio="xMidYMid meet">
+                    <g transform="translate(0.000000,176.000000) scale(0.100000,-0.100000)"
+                       stroke="none">
+                        <path d="M717 1734 c-183 -33 -334 -119 -561 -318 l-68 -60 6 -60 c31 -281
+148 -627 278 -819 82 -122 270 -295 440 -406 l68 -43 42 25 c89 52 296 213
+359 279 149 154 254 362 324 639 24 94 65 329 65 374 0 23 -165 169 -268 238
+-216 145 -442 195 -685 151z m363 -65 c140 -35 273 -118 434 -270 l79 -74 -12
+-90 c-47 -361 -145 -632 -295 -822 -73 -91 -153 -161 -301 -263 l-101 -68 -83
+56 c-301 203 -455 429 -551 811 -16 64 -36 161 -45 216 -8 55 -17 112 -20 126
+-4 24 10 39 121 135 167 146 246 198 347 229 152 47 278 51 427 14z"/>
+                        <path d="M876 1625 l-17 -54 -72 -3 -72 -3 50 -35 c27 -19 53 -38 57 -41 5 -3
+-1 -32 -12 -64 -11 -32 -19 -60 -17 -61 2 -2 27 13 56 32 l53 36 51 -36 c28
+-19 53 -33 55 -31 2 2 -5 29 -14 60 -21 64 -27 51 57 117 l34 27 -71 1 -70 0
+-18 55 c-9 30 -20 55 -25 55 -4 0 -15 -25 -25 -55z"/>
+                        <path d="M1162 1432 c-9 -27 -16 -32 -44 -32 l-33 -1 25 -21 c14 -11 24 -23
+24 -27 -1 -3 -4 -19 -8 -35 l-7 -28 28 20 28 20 28 -20 28 -20 -6 34 c-6 30
+-3 38 20 57 l28 21 -37 0 c-31 0 -38 4 -49 32 l-13 33 -12 -33z"/>
+                        <path d="M596 1415 c-5 -21 -12 -25 -44 -25 l-37 -1 29 -23 c24 -20 27 -28 21
+-57 l-7 -33 26 18 c25 16 29 16 51 2 33 -22 35 -21 25 16 -8 25 -6 34 8 44 9
+7 20 14 25 14 4 0 7 5 7 10 0 6 -15 10 -34 10 -28 0 -35 4 -40 25 -4 14 -10
+25 -15 25 -5 0 -12 -11 -15 -25z"/>
+                        <path d="M867 1286 c-21 -26 -60 -56 -92 -71 -49 -24 -64 -27 -123 -23 -38 3
+-94 16 -129 31 -35 14 -63 24 -63 22 0 -4 98 -177 104 -182 1 -1 54 9 117 24
+92 22 140 27 249 27 120 1 146 -2 233 -28 56 -16 102 -25 106 -20 10 11 91
+184 87 184 -2 0 -30 -12 -62 -27 -49 -23 -72 -28 -139 -28 -94 0 -137 19 -207
+89 l-44 45 -37 -43z"/>
+                        <path d="M694 1036 c-132 -25 -200 -54 -266 -114 -53 -48 -78 -102 -78 -175 0
+-101 64 -193 165 -238 37 -16 44 -25 53 -62 13 -52 59 -98 127 -129 70 -31
+240 -38 331 -13 62 17 144 65 144 85 0 5 -16 14 -36 19 -33 9 -40 7 -73 -18
+-53 -42 -101 -54 -195 -49 -63 3 -92 10 -125 29 -39 22 -82 72 -71 83 3 2 32
+0 65 -6 33 -5 125 -8 205 -5 201 7 318 42 420 126 l34 29 -40 11 c-92 25 -97
+24 -138 -8 -115 -91 -354 -116 -535 -55 -23 8 36 61 87 79 53 18 174 20 223 4
+19 -7 48 -22 64 -34 26 -18 36 -20 75 -12 l44 9 -36 33 c-49 45 -92 57 -229
+62 -136 6 -207 -9 -277 -59 l-43 -30 -26 23 c-72 66 -68 196 8 266 127 116
+509 121 629 8 24 -22 27 -23 95 -11 51 9 69 16 67 27 -7 33 -88 79 -193 110
+-96 27 -366 36 -475 15z"/>
+                    </g>
+                </svg>
+                <div class="name_sub">
+                    <p class="name">Custom Car</p>
+                    <p class="sub-name">Autostyling Studio</p>
+                </div>
+            </a>
+            <a href="https://t.me/sashabull" class="links__social" target="_blank"
+               title="перейти в профиль студии в telegram">
+                <svg width="30" height="30" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+                     fill="#000000">
+                    <g>
+                        <path
+                                d="M 16,0C 7.164,0,0,7.164,0,16s 7.164,16, 16,16s 16-7.164, 16-16C 32,7.162, 24.836,0, 16,0z M 21.998,14.8L 17.2,14.8 L 17.198,19.19 c0,1.114-0.014,1.756, 0.104,2.072c 0.118,0.314, 0.41,0.64, 0.73,0.828c 0.426,0.256, 0.91,0.382, 1.456,0.382 c 0.972,0, 1.546-0.128, 2.508-0.76L 21.996,24.6 c-0.82,0.386-1.534,0.61-2.2,0.766C 19.132,25.522, 18.414,25.6, 17.64,25.6 c-0.878,0-1.396-0.11-2.070-0.332c-0.674-0.222-1.25-0.54-1.726-0.948c-0.478-0.41-0.806-0.848-0.992-1.31 c-0.184-0.462-0.276-1.132-0.276-2.010L 12.576,14.268 L 10.002,14.268 l0-2.72 c 0.754-0.244, 1.598-0.596, 2.134-1.054 c 0.538-0.458, 0.97-1.006, 1.296-1.648C 13.756,8.208, 13.98,7.39, 14.104,6.4L 17.2,6.4 l0,4.8 l 4.798,0 L 21.998,14.8 z"></path>
+                    </g>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/customcarby/" class="links__social" target="_blank"
+               title="перейти в профиль студии в instagram">
+                <svg width="30" height="30" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+                     fill="#000000">
+                    <g>
+                        <path
+                                d="M 16,0C 7.164,0,0,7.164,0,16s 7.164,16, 16,16s 16-7.164, 16-16C 32,7.162, 24.836,0, 16,0z M 26,25.278 C 26,25.676, 25.676,26, 25.278,26L 6.722,26 C 6.324,26, 6,25.676, 6,25.278L 6,6.722 C 6,6.324, 6.324,6, 6.722,6l 18.556,0 C 25.676,6, 26,6.324, 26,6.722 L 26,25.278 zM 12,16A4,4 1080 1 0 20,16A4,4 1080 1 0 12,16zM 20,8L 24,8L 24,12L 20,12zM 21.95,16c0,3.282-2.67,5.95-5.95,5.95S 10.050,19.282, 10.050,16c0-0.426, 0.050-0.598, 0.134-1L 8,15 L 8,24 l 16,0 L 24,15 l-2.184,0 C 21.902,15.402, 21.95,15.574, 21.95,16z"></path>
+                    </g>
+                </svg>
+            </a>
+            <a href="https://www.youtube.com/c/CustomCarby/featured" class="links__social" target="_blank"
+               title="перейти на канал студии в youtube">
+                <svg width="30" height="30" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+                     fill="#000000">
+                    <g>
+                        <path
+                                d="M 16,0C 7.164,0,0,7.164,0,16s 7.164,16, 16,16s 16-7.164, 16-16C 32,7.162, 24.836,0, 16,0z M 25.83,19.582 c-0.108,1.332-1.118,3.032-2.534,3.278c-4.526,0.35-9.898,0.308-14.59,0c-1.464-0.184-2.426-1.948-2.534-3.278 c-0.228-2.796-0.228-4.388,0-7.184C 6.28,11.068, 7.266,9.314, 8.706,9.154c 4.638-0.39, 10.036-0.306, 14.59,0 c 1.632,0.060, 2.426,1.738, 2.534,3.070C 26.056,15.020, 26.056,16.786, 25.83,19.582zM 14,20L 20,16L 14,12 z"></path>
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <nav>
+            <div class="menu">
+                <input id="menu__toggle" type="checkbox"/>
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
+                <ul class="menu__box" id="menu__box">
+                    <li><a href="index.html" class="menu__item"
+                           title="перейти на главную страницу сайта">Главная</a></li>
+                    <li><a href="ceramics.html" class="menu__item"
+                           title="перейти на страницу сайта под названием покрытие керамикой">Керамика</a></li>
+                    <li><a href="polishing.html" class="menu__item"
+                           title="перейти на страницу сайта под названием полировка">Полировка</a></li>
+                    <li><a href="toning.html" class="menu__item"
+                           title="перейти на страницу сайта под названием тонировка">Тонировка</a></li>
+                    <li><a href="foil_wrapping.html" class="menu__item"
+                           title="перейти на страницу сайта под названием оклейка пленкой кузова автомобиля">Оклейка
+                        пленкой</a></li>
+                    <li><a href="dry_cleaning.html" class="menu__item"
+                           title="перейти на страницу сайта под названием химчистка">Химчистка</a></li>
+                    <li class="menu__links">
+                        <a href="https://t.me/sashabull" class="links__social" target="_blank">
+                            <svg width="50" height="50" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+                                 fill="#000000">
+                                <g>
+                                    <path
+                                            d="M 16,0C 7.164,0,0,7.164,0,16s 7.164,16, 16,16s 16-7.164, 16-16C 32,7.162, 24.836,0, 16,0z M 21.998,14.8L 17.2,14.8 L 17.198,19.19 c0,1.114-0.014,1.756, 0.104,2.072c 0.118,0.314, 0.41,0.64, 0.73,0.828c 0.426,0.256, 0.91,0.382, 1.456,0.382 c 0.972,0, 1.546-0.128, 2.508-0.76L 21.996,24.6 c-0.82,0.386-1.534,0.61-2.2,0.766C 19.132,25.522, 18.414,25.6, 17.64,25.6 c-0.878,0-1.396-0.11-2.070-0.332c-0.674-0.222-1.25-0.54-1.726-0.948c-0.478-0.41-0.806-0.848-0.992-1.31 c-0.184-0.462-0.276-1.132-0.276-2.010L 12.576,14.268 L 10.002,14.268 l0-2.72 c 0.754-0.244, 1.598-0.596, 2.134-1.054 c 0.538-0.458, 0.97-1.006, 1.296-1.648C 13.756,8.208, 13.98,7.39, 14.104,6.4L 17.2,6.4 l0,4.8 l 4.798,0 L 21.998,14.8 z"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/customcarby/" class="links__social" target="_blank">
+                            <svg width="50" height="50" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+                                 fill="#000000">
+                                <g>
+                                    <path
+                                            d="M 16,0C 7.164,0,0,7.164,0,16s 7.164,16, 16,16s 16-7.164, 16-16C 32,7.162, 24.836,0, 16,0z M 26,25.278 C 26,25.676, 25.676,26, 25.278,26L 6.722,26 C 6.324,26, 6,25.676, 6,25.278L 6,6.722 C 6,6.324, 6.324,6, 6.722,6l 18.556,0 C 25.676,6, 26,6.324, 26,6.722 L 26,25.278 zM 12,16A4,4 1080 1 0 20,16A4,4 1080 1 0 12,16zM 20,8L 24,8L 24,12L 20,12zM 21.95,16c0,3.282-2.67,5.95-5.95,5.95S 10.050,19.282, 10.050,16c0-0.426, 0.050-0.598, 0.134-1L 8,15 L 8,24 l 16,0 L 24,15 l-2.184,0 C 21.902,15.402, 21.95,15.574, 21.95,16z"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/c/CustomCarby/featured" class="links__social" target="_blank">
+                            <svg width="50" height="50" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+                                 fill="#000000">
+                                <g>
+                                    <path
+                                            d="M 16,0C 7.164,0,0,7.164,0,16s 7.164,16, 16,16s 16-7.164, 16-16C 32,7.162, 24.836,0, 16,0z M 25.83,19.582 c-0.108,1.332-1.118,3.032-2.534,3.278c-4.526,0.35-9.898,0.308-14.59,0c-1.464-0.184-2.426-1.948-2.534-3.278 c-0.228-2.796-0.228-4.388,0-7.184C 6.28,11.068, 7.266,9.314, 8.706,9.154c 4.638-0.39, 10.036-0.306, 14.59,0 c 1.632,0.060, 2.426,1.738, 2.534,3.070C 26.056,15.020, 26.056,16.786, 25.83,19.582zM 14,20L 20,16L 14,12 z"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <p>+375333113789</p>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="motto">
+                <video autoplay muted loop id="myVideo" poster="images/preload_background.png">
+                    <source
+                            src="images/video_background.mp4"
+                            type="video/mp4">
+                </video>
+                <div class="motto_content">
+                    <div class="motto__title">детейлинг</div>
+                    <div class="motto__body">правильный уход за вашим автомобилем</div>
+                </div>
+                <div class="about-us">
+                    <img src="images/about-us-img.jpg" alt="" class="about-us__image">
+                    <div class="about-us__content">
+                        <p class="about-us__title">Истории успеха</p>
+                        <p class="about-us__body">
+                            Что такое успех для компании, которая занимается полировкой, химчисткой, защитными
+                            покрытиями – детейлингом? 5 лет назад мы считали, что успех – это качественно выполненная
+                            работа.
+                            «Запиленная» машина, зеркальный
+                            блеск или чистый салон. Но со временем мы поняли, что успех – это не только разовый
+                            результат. Для нас
+                            успех – это возможность поддерживать автомобили клиентов в течение многих лет и тысяч
+                            километров.
+                            Многие наши клиенты, сменив автомобиль, продолжают приезжать к нам на новых автомобилях,
+                            автомобилях семьи
+                            и друзей. Мы создаем традиции обслуживания, становимся хорошей привычкой наших клиентов и
+                            гордимся этим.
+                        </p>
+                    </div>
+                </div>
+                <div class="reviews">
+                    <p class="reviews__title">О нас пишут:</p>
+                    <div class="reviews__area">
+                        <div class="reviews__slider" id="reviews__slider">
+                            <span id="reviews__left" onclick="reviews(2)"></span>
+                            <span id="reviews__right" onclick="reviews(1)"></span>
+                            <div class="reviews__line" id="reviews__line">
+                                <div class="reviews__item">
+                                    <div class="reviews__post">
+                                        <img src="images/reviwers_photo/1.png" alt="" class="reviews__photo">
+                                        <p class="reviews__name">Мария</p>
+                                        <p class="reviews__text">У нас в семье немецкая овчарка, с которой мы часто
+                                            выезжаем в лес
+                                            или еще куда
+                                            погулять в безлюдные места. Он очень любит купаться, и если находит водоем,
+                                            то его уже
+                                            не остановить. Я
+                                            думаю вы представляете какой запах в машине после мокрой собаки, да и грязи.
+                                            Мы
+                                            пробовали сами чистить,
+                                            но в итоге поняли, что без профессиональной химчистки авто нам не обойтись.
+                                            Обратились в
+                                            Custom Car и
+                                            вот что я хочу написать. 1. После химчистки машины неприятный запах пропал.
+                                            2. Была
+                                            приятно удивлена,
+                                            что ребята добрались и до дверных проемов, колесных дисков, обычно там все
+                                            равно
+                                            оставалось грязно. 3. Я
+                                            думала салон будет влажный, а он оказался полностью сухой. Итог: осталась
+                                            полностью
+                                            довольна химчисткой
+                                            нашего автомобиля. </p>
+                                    </div>
+                                </div>
+                                <div class="reviews__item">
+                                    <div class="reviews__post">
+                                        <img src="images/reviwers_photo/2.png" alt="" class="reviews__photo">
+                                        <p class="reviews__name">Владислав</p>
+                                        <p class="reviews__text">Покупал в Минске первую машину Audi A5 (T8). Обклеивал
+                                            виниловой
+                                            плёнкой (чёрный
+                                            глянец) Автомобиль б/у и с большим количеством дефектов на кузове, так что я
+                                            сделал
+                                            полировку кузова,
+                                            что очень освежило автомобиль. После поклейки автомобиль был как новый.
+                                            Когда
+                                            присутствовал на поклейке,
+                                            очень порадовало отношение мастеров к работе, всё выполнялось аккуратно, не
+                                            царапая
+                                            кузов при наложении,
+                                            как это обычно бывает в других компаниях. Очень приятно было наблюдать за
+                                            работой
+                                            настоящих мастеров.
+                                            Всем советую, если захотите освежить своё авто!</p>
+                                    </div>
+                                </div>
+                                <div class="reviews__item">
+                                    <div class="reviews__post">
+                                        <img src="images/reviwers_photo/3.png" alt="" class="reviews__photo">
+                                        <p class="reviews__name">Григорий</p>
+                                        <p class="reviews__text">Мой автомобиль уже не новый и начал терять свою былую
+                                            привлекательность. Здесь
+                                            сделали мне полировку кузова и фар автомобиля. Что естественно является и
+                                            защитой от
+                                            повреждений. Мой
+                                            автомобиль сразу засиял после их полировки, так как они использовали
+                                            качественные
+                                            материалы и
+                                            оборудование. Услуга конечно эта стоит определённых денег, но оно стоит
+                                            этого.</p>
+                                    </div>
+                                </div>
+                                <div class="reviews__item">
+                                    <div class="reviews__post">
+                                        <img src="images/reviwers_photo/4.png" alt="" class="reviews__photo">
+                                        <p class="reviews__name">Виктор</p>
+                                        <p class="reviews__text">Обращался в этот сервис. Машина далеко не новая, и
+                                            нужна была
+                                            полировка фар. С
+                                            утра приехал, после обеда сразу машину уже забрал. Сделали оперативно и
+                                            очень
+                                            качественно! Цена не
+                                            накрученная, вполне адекватная. Спасибо, теперь я Ваш постоянный клиент.</p>
+                                    </div>
+                                </div>
+                                <div class="reviews__item">
+                                    <div class="reviews__post">
+                                        <img src="images/reviwers_photo/5.png" alt="" class="reviews__photo">
+                                        <p class="reviews__name">Елизавета</p>
+                                        <p class="reviews__text">Обращались с мужем в Custom Car для того, чтобы сделать
+                                            защитное
+                                            покрытие
+                                            кузова на свой автомобиль. Цены приятно удивили, двухслойное керамическое
+                                            покрытие
+                                            обошлось нам всего в
+                                            1000руб. Заказ на сайте делать очень удобно, понятное и яркое оформление,
+                                            несколько
+                                            способов оплаты и
+                                            доставки.
+                                            Мы довольны :)</p>
+                                    </div>
+                                </div>
+                                <div class="reviews__item">
+                                    <div class="reviews__post">
+                                        <img src="images/reviwers_photo/6.png" alt="" class="reviews__photo">
+                                        <p class="reviews__name">Михаил</p>
+                                        <p class="reviews__text">Оставили с супругой такую оценку 5*, так как данный
+                                            сервис,
+                                            великолепный и вежливый персонал и самое главное качество их работы
+                                            превзошел все наши
+                                            ожидания. Последствием
+                                            некачественной мойки нашей машины оказались тускнеющие пятна на видных
+                                            местах, что очень
+                                            сильно влияет
+                                            на весь настрой перед встречами, работой и т.д. Очень долго откладывали
+                                            поход к фирмам
+                                            по полировке авто
+                                            и хорошо, так как чуть позже обратили свое внимание на Custom Car,
+                                            предоставляющие
+                                            услуги по полировке
+                                            авто в г. Гродно. Машина вышла как новая. До сих пор не может налюбоваться.
+                                            Благодарю
+                                            вас!!! И держите честный отзыв и оценку 5*!</p>
+                                    </div>
+                                </div>
+                                <div class="reviews__item">
+                                    <div class="reviews__post">
+                                        <img src="images/reviwers_photo/7.png" alt="" class="reviews__photo">
+                                        <p class="reviews__name">Матвей</p>
+                                        <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit. Ab ad
+                                            aspernatur aut, commodi consequatur consequuntur dolor dolore doloremque
+                                            doloribus ea
+                                            eligendi enim excepturi impedit inventore labore laboriosam laudantium nobis
+                                            officiis
+                                            pariatur provident quae qui quisquam quo repellendus suscipit tempora
+                                            tempore!</p>
+                                    </div>
+                                </div>
+                                <div class="reviews__item">
+                                    <div class="reviews__post">
+                                        <img src="images/reviwers_photo/8.png" alt="" class="reviews__photo">
+                                        <p class="reviews__name">Виталина</p>
+                                        <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit. Eligendi
+                                            omnis provident ratione! Accusantium, aliquid blanditiis dignissimos dolore,
+                                            enim et ex
+                                            excepturi fuga id officiis quos sint totam vero. A aliquid atque autem
+                                            cumque debitis
+                                            dolorem doloremque dolores ducimus est facere hic, illo impedit iste
+                                            molestias nam
+                                            necessitatibus non perferendis porro provident quia rerum similique
+                                            temporibus. Autem,
+                                            consequatur eaque est eum fugiat illum neque nulla quos ratione saepe soluta
+                                            unde
+                                            veniam.</p>
+                                    </div>
+                                </div>
+                                <div class="reviews__item">
+                                    <div class="reviews__post">
+                                        <img src="images/reviwers_photo/9.png" alt="" class="reviews__photo">
+                                        <p class="reviews__name">Витёк</p>
+                                        <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit. Alias
+                                            animi consequuntur corporis culpa cumque dolor doloribus, impedit, incidunt
+                                            iste itaque
+                                            laboriosam laborum, minus nam necessitatibus nemo nobis quaerat quasi
+                                            quibusdam quisquam
+                                            repudiandae saepe sapiente sint velit. Consectetur dolorem, incidunt magnam
+                                            odit
+                                            officiis quae? Accusantium architecto asperiores consequatur consequuntur
+                                            dolorem, et
+                                            fuga id libero maxime minima nihil nisi omnis quaerat quisquam reiciendis
+                                            repellendus
+                                            suscipit vitae. A dignissimos dolore magnam officiis quo?</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio">
+                    <h2 class="main__title portfolio__title">портфолио customcar</h2>
+                    <p class="main__sup-title portfolio__sup-title">За 5 лет нашей работы мы успели поработать с большим
+                        количеством
+                        автомобилей разных марок, классов и цветов.
+                        По нашим подсчетам количество авто, прошедших детейлинг в нашем центре, уже превышает отметку в
+                        1000!</p>
+                    <div class="slider" id="slider">
+                        <span id="slider__left" onclick="control(2)"></span>
+                        <span id="slider__right" onclick="control(1)"></span>
+                        <div class="slider__line" id="slider__line">
+                            <img src="images/portfolio/1615540655941_946027.jpg" class="slider__item"
+                                 alt="фото автомобиля после наших работ">
+                            <img src="images/portfolio/1615540655722_346726.jpg" class="slider__item"
+                                 alt="фото автомобиля после наших работ">
+                            <img src="images/portfolio/1615540654967_333755.jpg" class="slider__item"
+                                 alt="фото автомобиля после наших работ">
+                            <img src="images/portfolio/1615540652990_274098.jpg" class="slider__item"
+                                 alt="фото автомобиля после наших работ">
+                            <img src="images/portfolio/1615540652935_86852.jpg" class="slider__item"
+                                 alt="фото автомобиля после наших работ">
+                            <img src="images/portfolio/1615540652789_614106.jpg" class="slider__item"
+                                 alt="фото автомобиля после наших работ">
+                            <img src="images/portfolio/1615540651909_102633.jpg" class="slider__item"
+                                 alt="фото автомобиля после наших работ">
+                            <img src="images/portfolio/1615540651873_418193.jpg" class="slider__item"
+                                 alt="фото автомобиля после наших работ">
+                            <img src="images/portfolio/1615540651081_12331.jpg" class="slider__item"
+                                 alt="фото автомобиля после наших работ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer__work-time">
+                <p class="footer__title">Принимаем и консультируем:</p>
+                <p class="footer__time">с 9 утра до 21 вечера.</p>
+            </div>
+            <div class="footer__map">
+                <iframe
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3Ace0376cdb49cb803a93defbc7e6a51844de11c64dde52f8e55d53f464799f70a&amp;source=constructor"
+                        width="320" height="240" frameborder="0">
+                </iframe>
+            </div>
+            <div class="footer__menu-wrapper">
+                <ul class="footer__menu">
+                    <li><a href="index.html" class="menu__item"
+                           title="перейти на главную страницу сайта">Главная</a></li>
+                    <li><a href="ceramics.html" class="menu__item"
+                           title="перейти на страницу сайта под названием покрытие керамикой">Керамика</a></li>
+                    <li><a href="polishing.html" class="menu__item"
+                           title="перейти на страницу сайта под названием полировка">Полировка</a></li>
+                    <li><a href="toning.html" class="menu__item"
+                           title="перейти на страницу сайта под названием тонировка">Тонировка</a></li>
+                    <li><a href="foil_wrapping.html" class="menu__item"
+                           title="перейти на страницу сайта под названием оклейка пленкой кузова автомобиля">Оклейка
+                        пленкой</a></li>
+                    <li><a href="dry_cleaning.html" class="menu__item"
+                           title="перейти на страницу сайта под названием химчистка">Химчистка</a></li>
+                </ul>
+            </div>
+            <div class="footer__contacts">
+                <p class="footer__phone-number">+375333113789</p>
+                <div class="links">
+                    <a href="https://t.me/sashabull" class="links__social" target="_blank">
+                        <svg width="30" height="30" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+                             fill="#000000">
+                            <g>
+                                <path
+                                        d="M 16,0C 7.164,0,0,7.164,0,16s 7.164,16, 16,16s 16-7.164, 16-16C 32,7.162, 24.836,0, 16,0z M 21.998,14.8L 17.2,14.8 L 17.198,19.19 c0,1.114-0.014,1.756, 0.104,2.072c 0.118,0.314, 0.41,0.64, 0.73,0.828c 0.426,0.256, 0.91,0.382, 1.456,0.382 c 0.972,0, 1.546-0.128, 2.508-0.76L 21.996,24.6 c-0.82,0.386-1.534,0.61-2.2,0.766C 19.132,25.522, 18.414,25.6, 17.64,25.6 c-0.878,0-1.396-0.11-2.070-0.332c-0.674-0.222-1.25-0.54-1.726-0.948c-0.478-0.41-0.806-0.848-0.992-1.31 c-0.184-0.462-0.276-1.132-0.276-2.010L 12.576,14.268 L 10.002,14.268 l0-2.72 c 0.754-0.244, 1.598-0.596, 2.134-1.054 c 0.538-0.458, 0.97-1.006, 1.296-1.648C 13.756,8.208, 13.98,7.39, 14.104,6.4L 17.2,6.4 l0,4.8 l 4.798,0 L 21.998,14.8 z"></path>
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/customcarby/" class="links__social" target="_blank">
+                        <svg width="30" height="30" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+                             fill="#000000">
+                            <g>
+                                <path
+                                        d="M 16,0C 7.164,0,0,7.164,0,16s 7.164,16, 16,16s 16-7.164, 16-16C 32,7.162, 24.836,0, 16,0z M 26,25.278 C 26,25.676, 25.676,26, 25.278,26L 6.722,26 C 6.324,26, 6,25.676, 6,25.278L 6,6.722 C 6,6.324, 6.324,6, 6.722,6l 18.556,0 C 25.676,6, 26,6.324, 26,6.722 L 26,25.278 zM 12,16A4,4 1080 1 0 20,16A4,4 1080 1 0 12,16zM 20,8L 24,8L 24,12L 20,12zM 21.95,16c0,3.282-2.67,5.95-5.95,5.95S 10.050,19.282, 10.050,16c0-0.426, 0.050-0.598, 0.134-1L 8,15 L 8,24 l 16,0 L 24,15 l-2.184,0 C 21.902,15.402, 21.95,15.574, 21.95,16z"></path>
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/c/CustomCarby/featured" class="links__social" target="_blank">
+                        <svg width="30" height="30" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+                             fill="#000000">
+                            <g>
+                                <path
+                                        d="M 16,0C 7.164,0,0,7.164,0,16s 7.164,16, 16,16s 16-7.164, 16-16C 32,7.162, 24.836,0, 16,0z M 25.83,19.582 c-0.108,1.332-1.118,3.032-2.534,3.278c-4.526,0.35-9.898,0.308-14.59,0c-1.464-0.184-2.426-1.948-2.534-3.278 c-0.228-2.796-0.228-4.388,0-7.184C 6.28,11.068, 7.266,9.314, 8.706,9.154c 4.638-0.39, 10.036-0.306, 14.59,0 c 1.632,0.060, 2.426,1.738, 2.534,3.070C 26.056,15.020, 26.056,16.786, 25.83,19.582zM 14,20L 20,16L 14,12 z"></path>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="footer__copyright">© <a href="">Custom Car</a>. Информация, представленная на сайте, защищена законом
+            об
+            авторских правах. Копирование и
+            использование любой информации запрещено.</p>
+        <span id="upbutton">
+      <img src="images/up.png" alt="Top" class="upbtn" title="Наверх">
+    </span>
+    </footer>
+    <script src="js/up-key.js"></script>
+    <script src="js/burger-menu___cheker.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/slider__rew.js"></script>
+    <script src="js/preloader.js"></script>
 </body>
 </html>
