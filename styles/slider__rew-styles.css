@@ -1,19 +1,19 @@
 :root {
     --reviews-slider-width: 80vw; /* общая ширина для видимого окна слайдера и для одного слайда */
     --reviews-slider-height: 30em; /* общая высота для видимого окна слайдера и для одного слайда */
-    --button-top: calc(50% - 25px); /* общий отступ сверху для кнопок переключения слайдера */
     --button--width: 50px; /* общая ширина кнопок */
     --button--height: 50px; /* общая ширина кнопок */
+    --button-top: calc(50% - 25px); /* общий отступ сверху для кнопок переключения слайдера */
     --button--radius: 50%; /* общая ширина кнопок */
     --button-direction-color: rgb(255, 255, 255); /* общий цвет стрелок */
 }
 
 .reviews__slider { /* видимая область слайдера */
+    position: relative;
     width: var(--reviews-slider-width);
     height: var(--reviews-slider-height);
-    position: relative;
-    overflow: hidden;
     left: calc(50% - var(--reviews-slider-width)/2);
+    overflow: hidden;
 }
 
 #reviews__left { /* кнопка влево */
@@ -70,20 +70,20 @@
     position: absolute;
     width: var(--button--width);
     height: var(--button--height);
-    border-radius: var(--button--radius);
     margin: auto 0;
-    z-index: 2;
+    border-radius: var(--button--radius);
     background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2;
 }
 
 .reviews__line { /* контейнер для слайдов */
     position: absolute;
     display: flex;
     flex-direction: row;
+    max-height: var(--reviews-slider-height);
     top: 0;
     left: 0;
     transition: all cubic-bezier(0.76, 0.18, 0, 1.17) 1s;
-    max-height: var(--reviews-slider-height);
 }
 
 .reviews__item { /* один слайд */

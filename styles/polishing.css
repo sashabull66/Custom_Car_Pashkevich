@@ -1,25 +1,16 @@
-/*li > a[href="polishing.html"] { !* скрываю пункт меню этой страницы из header и из footer *!
-    display: none;
-}*/
-
 .polishing {
-
 }
 
 .polishing__sup-title {
-
 }
 
 .polishing__sub-title {
-
 }
 
 .polishing__img {
     width: 40vw;
     left: 20vw;
-
 }
 
 .polishing__content {
-
 }

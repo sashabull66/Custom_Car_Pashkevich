@@ -1,6 +1,7 @@
 @import "preloader.css";
 @import "normalize.css";
 @import "fonts.css";
+@import "root.css";
 
 * {
     padding: 0;
@@ -8,30 +9,33 @@
 }
 
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--white-color);
 }
 
 .loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid rgb(163, 116, 41);
-    border-radius: 50%;
     width: 120px;
     height: 120px;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid var(--main-color);
+    border-radius: 50%;
     animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-/*------------HEADER------------*/
 header { /* хедер без адаптива */
-    width: 100%;
     display: flex;
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 1px solid rgb(163, 116, 41);
+    border-bottom: 1px solid var(--main-color);
 }
 
 .links { /* левая часть хедера  */
@@ -48,7 +52,7 @@ header { /* хедер без адаптива */
 .links__logo > svg { /* svg логотип */
     max-width: 57px;
     max-height: 57px;
-    fill: rgb(163, 116, 41);
+    fill: var(--main-color);
 }
 
 .links__logo > svg:hover, /* при наведении или клике на лого и имя */
@@ -57,8 +61,8 @@ header { /* хедер без адаптива */
 .links__logo > .name_sub :active,
 .links__social > svg:hover, /* при наведении или клике на лого соцсетей */
 .links__social > svg:active {
-    color: rgb(173, 219, 202);
-    fill: rgb(173, 219, 202);
+    color: var(--link-hover-color);
+    fill: var(--link-hover-color);
     transition: .2s linear;
 }
 
@@ -69,14 +73,14 @@ header { /* хедер без адаптива */
 }
 
 .name { /* название студии */
-    color: rgb(163, 116, 41);
+    color: var(--main-color);
     font-weight: 600;
     font-size: 1.1em;
     line-height: 0.4em;
 }
 
 .sub-name { /* подпись под названием */
-    color: rgb(163, 116, 41);
+    color: var(--main-color);
     font-weight: 100;
     font-size: 0.7em;
 }
@@ -86,8 +90,8 @@ header { /* хедер без адаптива */
 }
 
 .links__social > svg { /* svg иконок-ссылок соц. сетей */
-    fill: rgb(163, 116, 41);
     width: 2em;
+    fill: var(--main-color);
 }
 
 nav { /* основное меню */
@@ -97,8 +101,8 @@ nav { /* основное меню */
 }
 
 .menu__box { /* главное меню в nav */
-    list-style: none;
     height: 100%;
+    list-style: none;
 }
 
 #menu__toggle { /* скрываю чекбокс меню */
@@ -107,7 +111,6 @@ nav { /* основное меню */
 
 .menu__btn {
     display: none; /* скрываю лэйбл-переключатель */
-
 }
 
 .menu__box li { /* список меню в хедере */
@@ -116,18 +119,18 @@ nav { /* основное меню */
 }
 
 .menu__box a { /* ссылки в списке меню в хедере */
-    text-decoration: none;
+    margin-right: 1rem;
+    color: var(--main-color);
     font-size: 1em;
     letter-spacing: 1px;
     font-weight: bold;
-    color: rgb(163, 116, 41);;
+    text-decoration: none;
     transition: .1s linear;
-    margin-right: 1rem;
 }
 
 .menu__box a:hover, /* при наведении и клике нассылки в списке меню в хедере */
 .menu__box a:active {
-    color: rgb(173, 219, 202);
+    color: var(--link-hover-color);
 }
 
 .menu__box > .menu__links {
@@ -137,45 +140,45 @@ nav { /* основное меню */
 /*------------/HEADER------------*/
 /*------------MAIN------------*/
 .main { /* общая обертка */
+    position: relative;
     display: inline-block;
     width: 80vw;
-    position: relative;
     left: 10vw;
 }
 
 .main__title { /*h1 заголовок на странице*/
+    margin: 0.67em 0;
+    color: var(--main-color);
     text-transform: uppercase;
-    color: rgb(163, 116, 41);
     font-size: 2em;
     text-align: left;
-    margin: 0.67em 0;
     font-weight: 500;
 }
 
 .main__sup-title { /* h2 трактовка заголовка на странице */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 400;
-    color: rgb(163, 116, 41);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-top: 1px solid rgb(163, 116, 41);
-    border-bottom: 1px solid rgb(163, 116, 41);
+    color: var(--main-color);
     text-indent: 0;
 }
 
 .main__sub-title { /* h3 заголовки самого низкого уровня на странице */
+    padding: 1em 0;
+    color: var(--black-color);
     text-transform: uppercase;
-    color: rgb(0, 0, 0);
     font-size: 1.5em;
     text-align: left;
     letter-spacing: 0.12em;
-    padding: 1em 0;
 }
 
 .main__img { /* контентные изображенрия на странице */
-    width: 60vw;
     position: relative;
+    width: 60vw;
     left: 10vw;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -219,11 +222,11 @@ footer { /*!!!!!!!!*/
 }
 
 .footer__map { /* обертка яндекс карты */
-    text-align: center;
-    box-shadow: 0 0 29px -10px #000000;
-    border-radius: 10px;
     width: 20em;
     height: 15em;
+    border-radius: 10px;
+    box-shadow: 0 0 29px -10px var(--black-color);
+    text-align: center;
 }
 
 .footer__map > iframe { /* фрейм с картой */
@@ -236,13 +239,13 @@ footer { /*!!!!!!!!*/
 }
 
 .footer__menu { /* список меню в футере */
-    list-style: none;
     display: inline-block;
+    list-style: none;
 }
 
 .footer__menu > li > a { /* ссылки в пунктах меню в футере */
+    color: var(--black-color);
     text-decoration: none;
-    color: black;
     font-size: 1.2em;
     font-weight: 500;
     font-style: unset;
@@ -273,8 +276,8 @@ footer { /*!!!!!!!!*/
 }
 
 .footer__contacts > .links > .links__social > svg { /* svg внутри ссылок соц сетей */
-    fill: black;
     width: 2em;
+    fill: var(--black-color);
 }
 
 .footer__contacts > .links > .links__social svg:hover, /* при наведении или клике на лого соцсетей */
@@ -284,9 +287,9 @@ footer { /*!!!!!!!!*/
 }
 
 .footer__copyright { /* копирайт в футере */
+    margin-top: 3rem;
     text-align: center;
     font-size: 0.9em;
-    margin-top: 3rem;
 }
 
 @media (max-width: 1110px) {
@@ -346,9 +349,9 @@ footer { /*!!!!!!!!*/
         margin: 0;
     }
 
-    .nav { /* !!!! */
-        text-align: center;
+    .nav {
         padding: 10px 0 0 0;
+        text-align: center;
     }
 
     .links__social { /* ссылки логотипы соц. сетей */
@@ -375,23 +378,23 @@ footer { /*!!!!!!!!*/
     }
 
     .footer__menu { /* список меню в футере */
-        list-style: none;
         display: flex;
         justify-content: space-evenly;
         margin-top: 1rem;
         margin-bottom: -2rem;
+        list-style: none;
     }
 
     .footer__work-time { /* раб время в футере */
-        order: 3;
         padding: 0;
         flex-basis: 100%;
+        order: 3;
         text-align: center;
     }
 
     .footer__copyright { /* копирайт в футере */
-        font-size: 0.9em;
         margin-top: 0;
+        font-size: 0.9em;
     }
 
     .footer__contacts {
@@ -403,23 +406,23 @@ footer { /*!!!!!!!!*/
     }
 
     .footer__contacts { /* обертка иконок соц сетей и номера телефона в футере */
-        order: 4;
         padding: 0.3rem;
         flex-basis: 100%;
+        order: 4;
         text-align: center;
     }
 
     .footer__map { /* обертка яндекс карты */
-        order: 1;
         flex-basis: 100%;
+        order: 1;
     }
 }
 
 @media (max-width: 716px) {
     header {
-        width: 100%;
         display: inline-block;
-        border-bottom: 1px solid black;
+        width: 100%;
+        border-bottom: 1px solid var(--black-color);
     }
 
     nav { /* основное меню */
@@ -444,7 +447,7 @@ footer { /*!!!!!!!!*/
     }
 
     .menu__box > .menu__links > p { /* номер телефона в бургере */
-        color: rgb(163, 116, 41);
+        color: var(--main-color);
         font-size: 2.5rem;
         letter-spacing: 3px;
     }
@@ -452,15 +455,15 @@ footer { /*!!!!!!!!*/
     /*-----------ниже бургер меню которое отобразится на мобилках------------*/
     /* стилизуем кнопку */
     .menu__btn { /* лэйбл-кнопка бургер меню */
-        display: flex; /* используем flex для центрирования содержимого */
-        align-items: center; /* центрируем содержимое кнопки */
         position: fixed;
+        display: flex; /* используем flex для центрирования содержимого */
+        width: 26px;
+        height: 26px;
         right: 0;
         top: 0;
         margin-right: 15px;
         margin-top: 15px;
-        width: 26px;
-        height: 26px;
+        align-items: center; /* центрируем содержимое кнопки */
         cursor: pointer;
         z-index: 999;
     }
@@ -468,11 +471,11 @@ footer { /*!!!!!!!!*/
     .menu__btn > span, /* добавляю "гамбургер" снизу и сверху лэйбла */
     .menu__btn > span::before,
     .menu__btn > span::after {
-        display: block;
         position: absolute;
+        display: block;
         width: 100%;
         height: 2px;
-        background-color: rgb(163, 116, 41);
+        background-color: var(--main-color);
     }
 
     .menu__btn > span::before {
@@ -486,27 +489,27 @@ footer { /*!!!!!!!!*/
     }
 
     .menu__box { /* список меню в хедере */
+        position: fixed;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        padding: 80px 0;
+        margin: 0;
+        box-shadow: 1px 0 6px rgba(0, 0, 0, .2);
+        background-color: rgb(61, 68, 75);
+        list-style: none;
+        text-align: center;
+        visibility: hidden;
         transform: translateY(-100%); /* устанавливаю способ прятания */
         transition-duration: 1s; /* время */
         z-index: 2;
-        display: block;
-        position: fixed;
-        visibility: hidden;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 80px 0;
-        list-style: none;
-        text-align: center;
-        background-color: rgb(61, 68, 75);
-        box-shadow: 1px 0 6px rgba(0, 0, 0, .2);
     }
 
     .menu__item { /* ссылки в пунктах меню в хедере */
         display: block;
         padding: 12px 24px;
-        color: rgb(163, 116, 41);
+        color: var(--main-color);
         font-size: 20px;
         font-weight: 600;
         text-decoration: none;
@@ -515,15 +518,15 @@ footer { /*!!!!!!!!*/
 
     .menu__box a:hover, /* при наведении и клике нассылки в списке меню в хедере */
     .menu__box a:active {
-        color: rgb(173, 219, 202);
+        border: 1px solid var(--link-hover-color);
+        color: var(--link-hover-color);
         background-color: rgba(61, 68, 75, 0.5);
-        border: 1px solid rgb(173, 219, 202);
     }
 
     .menu__box a {
+        padding: 1.5rem 0;
         margin-right: 0;
         font-size: 1.5rem;
-        padding: 1.5rem 0;
     }
 
     #menu__toggle:checked ~ .menu__btn > span {
@@ -539,20 +542,19 @@ footer { /*!!!!!!!!*/
         top: 0;
         transform: rotate(90deg);
     }
-
     /*#menu__toggle:checked ~ .menu__box*/
     .show {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        left: 0;
+        padding-top: 3em;
+        align-items: center;
+        align-content: center;
         transform: translateY(0%); /* перебиваю hide */
         transition-duration: 1s; /* перебиваю hide */
         visibility: visible;
-        left: 0;
         z-index: 2;
-        padding-top: 3em;
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        align-content: center;
-        justify-content: flex-start;
     }
 
     .menu__btn > span,
@@ -567,8 +569,8 @@ footer { /*!!!!!!!!*/
     }
 
     .menu__box {
-        margin: 0;
         padding: 0;
+        margin: 0;
         list-style-type: none;
     }
 
@@ -597,11 +599,11 @@ footer { /*!!!!!!!!*/
     }
 
     .footer__menu {
-        list-style: none;
         display: flex;
         justify-content: space-evenly;
         margin-top: 1rem;
         margin-bottom: -2rem;
+        list-style: none;
     }
 
     .footer__menu > li > .menu__item {
@@ -610,20 +612,20 @@ footer { /*!!!!!!!!*/
 
     .footer__work-time {
         order: 3;
-        padding: 0;
         flex-basis: 100%;
+        padding: 0;
         text-align: center;
     }
 
     .footer__copyright {
-        font-size: 0.9em;
         margin-top: 0;
+        font-size: 0.9em;
     }
 
     .footer__contacts {
         order: 4;
-        padding: 0.3rem;
         flex-basis: 100%;
+        padding: 0.3rem;
         text-align: center;
     }
 }
@@ -653,26 +655,23 @@ footer { /*!!!!!!!!*/
 .up-key {
     transition-property: all;
     transition-duration: 2s;
-
 }
 
 #upbutton { /* кнопка вверх */
+    position: fixed;
+    display: none;
     height: 63px;
     width: 38px;
     bottom: 15px;
     right: 70px;
     cursor: pointer;
-    display: none;
-    position: fixed;
     z-index: 999;
 }
-
 /*------------/FOOTER------------*/
-
 .remove {
-    display: none!important;
+    display: none !important;
 }
 
 .display {
-    display: block!important;
+    display: block !important;
 }

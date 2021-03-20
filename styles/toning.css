@@ -1,13 +1,7 @@
-/*li > a[href="toning.html"] { !* скрываю пункт меню этой страницы из header и из footer *!
-    display: none;
-}*/
-
 .toning { /* обертка */
-
 }
 
 .toning__tittle { /* h1 */
-
 }
 
 .toning__sup-title { /* h2 */
@@ -21,7 +15,6 @@
 }
 
 .toning__sub-title { /* h3 */
-
 }
 
 .toning__list {
@@ -35,18 +28,17 @@
 }
 
 .toning__content { /* основной текст-контент */
-
 }
 
 .toning__img {
 }
 
 table {
+    position: relative;
     width: 80%;
+    margin: 1rem 10% 1rem 10%;
     border-collapse: collapse;
     font-weight: 100;
-    position: relative;
-    margin: 1rem 10% 1rem 10%;
 }
 
 tr {
@@ -57,20 +49,21 @@ tr:last-child {
 }
 
 td, th {
+    padding: 0.4rem 0;
     text-align: center;
     font-size: 1em;
-    padding: 0.4rem 0;
 }
 
 td {
-    color: rgb(35, 15, 36);
-    font-weight: 400;
     border-left: 1px solid rgb(35, 15, 36);
     border-right: 1px solid rgb(35, 15, 36);
+    color: rgb(35, 15, 36);
+    font-weight: 400;
+
 }
 
 tr:nth-child(even) {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--white-color);
 }
 
 tr:nth-child(odd) {
@@ -81,7 +74,7 @@ th {
     font-weight: 500;
     background-color: rgb(3, 67, 144);
     color: rgb(202, 224, 235);
-    border-left: 1px solid rgb(255, 255, 255);
+    border-left: 1px solid var(--white-color);
     border-top: 1px solid rgb(35, 15, 36);
 }
 
@@ -101,30 +94,27 @@ ul > li > span {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-
 }
 
 .toning__card {
-    width: 20%;
-    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
+    flex: 0 1 auto;
+    width: 20%;
+    padding: 15px;
+    margin-bottom: 1rem;
     border: 2px solid rgb(199, 8, 26);
     border-radius: 5px;
-    padding: 15px;
-    background-color: rgb(255, 255, 255);
-    flex: 0 1 auto;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
     -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
-
-
+    background-color: var(--white-color);
 }
 
 .toning__purchase {
-    text-align: center;
     height: 2.2em;
     font-weight: 700;
+    text-align: center;
 }
 
 
@@ -133,19 +123,19 @@ ul > li > span {
 }
 
 .toning__description {
-    text-align: justify;
-    color: rgb(136, 151, 124);
     margin-bottom: 1rem;
+    color: rgb(136, 151, 124);
+    text-align: justify;
     font-size: 0.9em;
 }
 
 .toning__prise {
-    text-align: center;
+    padding: 0.5em 0;
     margin: auto 1.2rem 0 1.2rem;
     background-color: rgb(199, 8, 26);
-    color: rgb(255, 255, 255);
-    padding: 0.5em 0;
+    color: var(--white-color);
     border-radius: 8px;
+    text-align: center;
 }
 
 @media (max-width: 1110px) {
@@ -170,11 +160,9 @@ ul > li > span {
     }
 
     .card1 {
-
     }
 
     .card2 {
-
     }
 
     .card1, .card2 {
@@ -182,11 +170,9 @@ ul > li > span {
     }
 
     .card3 {
-
     }
 
     .card4 {
-
     }
 
     .card3, .card4 {
@@ -224,15 +210,15 @@ ul > li > span {
     }
 
     .toning__prise {
+        padding: 0.5em 1.5em;
         margin: auto 6.2rem 0 6.2rem;
-        padding: 0.5em 1.5em;;
     }
 }
 
 @media (max-width: 430px) {
     .toning__prise {
-        margin: auto 5.2rem 0 5.2rem;
         padding: 0.5em 0;
+        margin: auto 5.2rem 0 5.2rem;
     }
 }
 
@@ -248,7 +234,3 @@ ul > li > span {
         font-size: 0.7em;
     }
 }
-
-
-
-

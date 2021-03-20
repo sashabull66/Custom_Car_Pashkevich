@@ -1,7 +1,3 @@
-/*li > a[href="ceramics.html"] { !* скрываю пункт меню этой страницы из header и из footer *!
-    display: none;
-}*/
-
 .ceramics { /* общая обертка */
 }
 
@@ -40,7 +36,7 @@
         font-size: 0.8rem;
     }
     .ceramics__list {
-        font-size: 0.8rem;
         margin-left: 0.8rem;
+        font-size: 0.8rem;
     }
 }

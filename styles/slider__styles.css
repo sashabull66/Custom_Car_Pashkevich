@@ -1,16 +1,16 @@
 :root {
     --slider-width: 850px; /* общая ширина для видимого окна слайдера и для одного слайда */
     --slider-height: 530px; /* общая высота для видимого окна слайдера и для одного слайда */
-    --button-top: calc(50% - 25px); /* общий отступ сверху для кнопок переключения слайдера */
     --button--width: 50px; /* общая ширина кнопок */
     --button--height: 50px; /* общая ширина кнопок */
+    --button-top: calc(50% - 25px); /* общий отступ сверху для кнопок переключения слайдера */
     --button--radius: 50%; /* общая ширина кнопок */
 }
 
 .slider { /* видимая область слайдера */
+    position: relative;
     width: var(--slider-width);
     height: var(--slider-height);
-    position: relative;
     overflow: hidden;
 }
 
@@ -66,22 +66,22 @@
     position: absolute;
     width: var(--button--width);
     height: var(--button--height);
-    border-radius: var(--button--radius);
     top: var(--button-top);
     margin: auto 0;
-    z-index: 2;
+    border-radius: var(--button--radius);
     color: #fff;
     background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2;
 }
 
 .slider__line { /* контейнер для слайдов */
     position: absolute;
     display: flex;
     flex-direction: row;
+    max-height: var(--slider-height);
     top: 0;
     left: 0;
     transition: all ease 1s;
-    max-height: var(--slider-height);
 }
 
 .slider__item { /* один слайд */

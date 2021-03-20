@@ -1,11 +1,3 @@
-/*::-webkit-scrollbar { !* chrome based убираю скролл *!
-    width: 0;  !* ширина scrollbar *!
-    background: transparent;  !* опционально *!
-}
-
-html {
-    -ms-overflow-style: none;  !* убираю скролл IE 10+ *!
-}*/
 @import "slider__styles.css";
 @import "slider__rew-styles.css";
 
@@ -28,26 +20,26 @@ main > .wrapper {
 
 .motto { /* первый сверху текстовый блок */
     width: 100%;
-    z-index: 1;
     align-self: flex-start;
+    z-index: 1;
 }
 
 #myVideo { /* видео */
-    width: 100%;
     position: absolute;
+    width: 100%;
     z-index: -1;
 }
 
 .motto_content {
-    padding-top: 3rem;
-    padding-left: 8rem;
     position: relative;
     height: 30vh;
+    padding-top: 3rem;
+    padding-left: 8rem;
 }
 
 .motto__title, .motto__body {
-    text-align: left;
     color: rgb(163, 153, 41);
+    text-align: left;
     text-transform: uppercase;
 }
 
@@ -64,12 +56,12 @@ main > .wrapper {
 }
 
 .about-us {
-    height: auto;
-    background-color: white;
     display: flex;
+    height: auto;
     padding: 20px;
     border-bottom: 1px solid rgb(163, 116, 41);
     border-top: 1px solid rgb(163, 116, 41);
+    background-color: var(--white-color);
 }
 
 .about-us__image {
@@ -91,21 +83,21 @@ main > .wrapper {
 }
 
 .about-us__body {
-    font-size: 1.2em;
     color: gray;
+    font-size: 1.2em;
     text-align: justify;
 }
 
 .reviews {
-    background-color: white;
     border-bottom: 1px solid rgb(163, 116, 41);
+    background-color: var(--white-color);
 }
 
 .reviews__title {
-    border-bottom: 4px solid rgb(163, 116, 41);
     display: inline-block;
     width: 80%;
-    margin: 2% 10% 0 10%;;
+    margin: 2% 10% 0 10%;
+    border-bottom: 4px solid rgb(163, 116, 41);
     color: rgb(163, 116, 41);
     font-size: 2.5em;
     font-weight: 600;
@@ -127,16 +119,16 @@ main > .wrapper {
 }
 
 .reviews__name {
+    margin: 0.2rem auto;
     text-align: center;
     font-size: 2em;
     font-weight: 600;
-    margin: 0.2rem auto;
 }
 
 .reviews__text {
+    color: gray;
     text-align: justify;
     font-size: 1.5em;
-    color: gray;
 }
 
 .portfolio {
@@ -225,10 +217,10 @@ main > .wrapper {
     }
 
     .motto_content {
-        padding-top: 5px;
-        padding-left: 5px;
         position: relative;
         height: 20vh;
+        padding-top: 5px;
+        padding-left: 5px;
     }
 
     .about-us__content {
