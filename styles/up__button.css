@@ -1,0 +1,38 @@
+#upbutton { /* кнопка вверх */
+    position: fixed;
+    display: none;
+    height: 40px;
+    width: 40px;
+    bottom: 15px;
+    right: 70px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+#upbutton:before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--main-color);
+    transform: rotate(40deg);
+
+}
+
+#upbutton:after {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--main-color);
+    transform: rotate(-40deg) translate(-10px, -33px);
+}
+
+@media (max-width: 1110px) {
+    #upbutton:after {
+        transform: rotate(-40deg) translate(-15px, -27px);
+    }
+
+}

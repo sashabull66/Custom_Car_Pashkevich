@@ -2,6 +2,7 @@
 @import "normalize.css";
 @import "fonts.css";
 @import "root.css";
+@import "up__button.css";
 
 * {
     padding: 0;
@@ -232,6 +233,7 @@ footer { /*!!!!!!!!*/
 .footer__map > iframe { /* фрейм с картой */
     width: 100%;
     height: 100%;
+    border: none;
 }
 
 .footer__menu-wrapper { /* обертка списка меню в футере */
@@ -650,22 +652,6 @@ footer { /*!!!!!!!!*/
     body {
         min-width: 346px;
     }
-}
-
-.up-key {
-    transition-property: all;
-    transition-duration: 2s;
-}
-
-#upbutton { /* кнопка вверх */
-    position: fixed;
-    display: none;
-    height: 63px;
-    width: 38px;
-    bottom: 15px;
-    right: 70px;
-    cursor: pointer;
-    z-index: 999;
 }
 /*------------/FOOTER------------*/
 .remove {
