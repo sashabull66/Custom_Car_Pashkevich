@@ -1,3 +1,4 @@
+@import "style_shared.css";
 @import "slider__styles.css";
 @import "slider__rew-styles.css";
 
@@ -9,12 +10,14 @@ main {
     max-width: 100%;
 }
 
+h1 {
+    position: absolute;
+    visibility: hidden;
+}
+
 .wrapper { /* обертка */
     position: relative;
     display: flex;
-}
-
-main > .wrapper {
     flex-direction: column;
 }
 
