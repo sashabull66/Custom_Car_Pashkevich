@@ -229,13 +229,23 @@ footer { /*!!!!!!!!*/
     height: 15em;
     border-radius: 10px;
     box-shadow: 0 0 29px -10px var(--black-color);
-    text-align: center;
+/*    text-align: center;*/
+    overflow: hidden;
 }
 
-.footer__map > iframe { /* фрейм с картой */
+.map{
+}
+
+.map__link { /* фрейм с картой */
+    position: relative;
     width: 100%;
     height: 100%;
-    border: none;
+}
+
+.map__img {
+    position: absolute;
+    left: -500px;
+    top: -290px;
 }
 
 .footer__menu-wrapper { /* обертка списка меню в футере */
