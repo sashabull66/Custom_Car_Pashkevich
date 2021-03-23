@@ -236,10 +236,11 @@ footer { /*!!!!!!!!*/
 .map{
 }
 
-.map__link { /* фрейм с картой */
+.map__link {
     position: relative;
     width: 100%;
     height: 100%;
+    cursor: crosshair;
 }
 
 .map__img {

@@ -19,6 +19,7 @@
 #reviews__left { /* кнопка влево */
     left: 0;
     top: 15%;
+    cursor: pointer;
 }
 
 #reviews__left:before { /* составная часть стрелки влево */
@@ -44,6 +45,7 @@
 #reviews__right { /* кнопка влево */
     left: 0;
     top: 30%;
+    cursor: pointer;
 }
 
 #reviews__right:before { /* составная часть стрелки вправо */

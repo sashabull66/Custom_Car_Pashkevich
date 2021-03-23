@@ -16,6 +16,7 @@
 
 #slider__left { /* кнопка влево */
     left: 5px;
+    cursor: pointer;
 }
 
 #slider__left:before { /* составная часть стрелки влево */
@@ -40,6 +41,7 @@
 
 #slider__right { /* кнопка влево */
     right: 5px;
+    cursor: pointer;
 }
 
 #slider__right:before { /* составная часть стрелки вправо */
