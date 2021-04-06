@@ -1,0 +1,103 @@
+:root {
+    --slider-width: 850px; /* общая ширина для видимого окна слайдера и для одного слайда */
+    --slider-height: 530px; /* общая высота для видимого окна слайдера и для одного слайда */
+    --button--width: 50px; /* общая ширина кнопок */
+    --button--height: 50px; /* общая ширина кнопок */
+    --button-top: calc(50% - 25px); /* общий отступ сверху для кнопок переключения слайдера */
+    --button--radius: 50%; /* общая ширина кнопок */
+}
+
+.slider { /* видимая область слайдера */
+    position: relative;
+    width: var(--slider-width);
+    height: var(--slider-height);
+    overflow: hidden;
+}
+
+#slider__left { /* кнопка влево */
+    left: 5px;
+    cursor: pointer;
+}
+
+#slider__left:before { /* составная часть стрелки влево */
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    z-index: 3;
+    transform: translate(60%, 200%) rotate(-45deg);
+}
+
+#slider__left:after { /* составная часть стрелки влево */
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    z-index: 3;
+    transform: translate(-37%, 609%) rotate(45deg);
+}
+
+#slider__right { /* кнопка влево */
+    right: 5px;
+    cursor: pointer;
+}
+
+#slider__right:before { /* составная часть стрелки вправо */
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    z-index: 3;
+    transform: translate(90%, 200%) rotate(-145deg);
+}
+
+#slider__right:after { /* составная часть стрелки вправо */
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    z-index: 3;
+    transform: translate(-13%, 609%) rotate(-45deg);
+}
+
+#slider__right, #slider__left { /* общие стили для обеих кнопок */
+    position: absolute;
+    width: var(--button--width);
+    height: var(--button--height);
+    top: var(--button-top);
+    margin: auto 0;
+    border-radius: var(--button--radius);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.slider__line { /* контейнер для слайдов */
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    max-height: var(--slider-height);
+    top: 0;
+    left: 0;
+    transition: all ease 1s;
+}
+
+.slider__item { /* один слайд */
+    width: var(--slider-width);
+    height: var(--slider-height);
+}
+
+/* **** Структура HTML ****
+<div class="slider" id="slider">
+  <span id="slider__left" onclick="control(2)"></span>
+  <span id="slider__right" onclick="control(1)"></span>
+  <div class="slider__line" id="slider__line">
+    <div class="slider__item">....</div>
+    <div class="slider__item">....</div>
+  </div>
+</div>
+*/

@@ -1,0 +1,42 @@
+.ceramics { /* общая обертка */
+}
+
+.ceramics__title {
+}
+
+.ceramics__sup-title {
+}
+
+.ceramics__sub-title {
+}
+
+.ceramics__img {
+}
+
+.ceramics__content {
+}
+
+.ceramics__list {
+}
+
+@media (max-width: 344px) {
+    body {
+        font-size: 9px;
+    }
+    .ceramics { /* общая обертка */
+        width: 100vw;
+        left: 4vw;
+        right: 3vw;
+    }
+    .ceramics__img {
+        width: 100vw;
+        left: -0.2rem;
+    }
+    .ceramics__content {
+        font-size: 0.8rem;
+    }
+    .ceramics__list {
+        margin-left: 0.8rem;
+        font-size: 0.8rem;
+    }
+}

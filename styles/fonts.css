@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../Fonts/Gilroy-SemiBold.woff2') format("woff2"),
+    url('../Fonts/Gilroy-SemiBold.woff') format("woff");
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url('../Fonts/Gilroy-Regular.woff2') format("woff2"),
+    url('../Fonts/Gilroy-Regular.woff') format("woff");
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../Fonts/Gilroy-Medium.woff2') format("woff2"),
+    url('../Fonts/Gilroy-Medium.woff') format("woff");
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('../Fonts/Gilroy-Light.woff2') format("woff2"),
+    url('../Fonts/Gilroy-Light.woff') format("woff");
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url('../Fonts/Gilroy-Bold.woff2') format("woff2"),
+    url('../Fonts/Gilroy-Bold.woff') format("woff");
+}
+
+body {
+    font-family: Gilroy, serif; /*задаю общий для body шрифт*/
+}
